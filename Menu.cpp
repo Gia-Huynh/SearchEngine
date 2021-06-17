@@ -25,9 +25,11 @@ int main()
     //return 0;
     char yes;
     int n = 1;
-    Str = inpWstring(L"test input: ");
-    wcout << Str << endl;
-    /*
+    Str = inpWstring(L"Input file: ");
+    wcout << "File inputed: " << Str << endl;
+    wstring FileStr = L" ";
+    FileStr = fileWstring(Str.data());
+       /*
     printHelp();
     while (true)
     {

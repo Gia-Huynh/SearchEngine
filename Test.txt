@@ -1,0 +1,5 @@
+1) Đọc input split bằng xuống dòng \n
+2) Loại bỏ tất cả dấu câu. (Hậu quả là các từ như cát-ca-đơ sẽ thành cátcađơ, vẫn giữ được tính độc lập)
+^ Note ở trên, hậu quả là lúc truy vấn cũng phải loại bỏ ký tự đặc biệt.
+3) Loại bỏ stopword (tài liệu thầy đưa có).
+4) Cắt string thành các từ đơn theo khoảng trắng.

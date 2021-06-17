@@ -18,6 +18,7 @@
 
 using namespace std;
 wstring inpWstring(const wchar_t message[]);
+wstring fileWstring(const wchar_t file_name[]);
 void Bai1();
 void Bai2();
 void Bai3();

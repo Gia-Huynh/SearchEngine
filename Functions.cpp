@@ -9,6 +9,26 @@ wstring inpWstring(const wchar_t message[])
     //wcin >> s;
     return s;
 };
+
+
+wstring fileWstring(const wchar_t file_name[])
+{
+    wifstream inFile;
+    _setmode(_fileno(stdin), _O_U16TEXT);
+    locale::global(locale("vi_VN.utf8"));
+    inFile.open(file_name);
+    wstring s;
+    //s = inFile.read();
+    while (inFile >> ws, getline(inFile, s, L' '))
+    {
+        //replace(s.begin(), s.end(), '\n', ' ');
+        wcout << "Yes: " << s << endl;
+    };
+    //getline(std::wcin, s);
+    //wcin >> s;
+    return s;
+};
+
 void Bai1()
 {
         _setmode(_fileno(stdout), _O_U16TEXT);
