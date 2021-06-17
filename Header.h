@@ -10,8 +10,14 @@
 #include <math.h>
 #include <cstdio>
 #include <algorithm>
+
 #include <fstream>
+#include <io.h>
+#include <fcntl.h>
+#include <iostream>
+
 using namespace std;
+wstring inpWstring(const wchar_t message[]);
 void Bai1();
 void Bai2();
 void Bai3();

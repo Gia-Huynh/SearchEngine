@@ -1,31 +1,42 @@
-// 20120070.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// 20120070.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include "Header.h"
+#include <windows.h>
 void printHelp()
 {
-    printf("_______________________________________\n");
-    printf("|                                     |\n");
-    printf("| 0 Thoat chuong trinh                |\n");
-    printf("| 1                 |\n");
-    printf("| 2                     |\n");
-    printf("| 3                     |\n");
-    printf("| 4               |\n");
-    printf("| 10 Hien thi lai menu              |\n");
-    printf("|_____________________________________|\n");
+    wprintf(L"_______________________________________\n");
+    wprintf(L"|                                     |\n");
+    wprintf(L"| 0 Thoat chuong trinh                |\n");
+    wprintf(L"| 1                 |\n");
+    wprintf(L"| 2                     |\n");
+    wprintf(L"| 3                     |\n");
+    wprintf(L"| 4               |\n");
+    wprintf(L"| 10 Hien thi lai menu              |\n");
+    wprintf(L"|_____________________________________|\n");
 };
 int main()
 {
+    _setmode(_fileno(stdin), _O_U16TEXT);
+    _setmode(_fileno(stdout), _O_U16TEXT);
+
+    locale::global(locale("vi_VN.utf8"));
+    wstring Str = L"Tiếng Việt";
+    wcout << Str << endl;
+    //return 0;
     char yes;
     int n = 1;
+    Str = inpWstring(L"test input: ");
+    wcout << Str << endl;
+    /*
     printHelp();
     while (true)
     {
-        printf("Nhap so (0-10): ");
+        wprintf(L"Nhap so (0-10): ");
         scanf_s(" %d", &n);
         switch (n)
         {
         case 0:
-            printf("Chuong trinh tu huy trong 3...2...1...0");
+            wprintf(L"Chuong trinh tu huy trong 3...2...1...0");
             return 0;
             break;
         case 1:
@@ -59,7 +70,7 @@ int main()
             printHelp();
             break;
         default:
-            printf("Khong hop le\n");
+            wprintf(L"Khong hop le\n");
         };
-    };
+    };*/
 };
