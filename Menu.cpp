@@ -17,18 +17,28 @@ void printHelp()
 int main()
 {
     _setmode(_fileno(stdin), _O_U16TEXT);
-    _setmode(_fileno(stdout), _O_U16TEXT);
+    //_setmode(_fileno(stdout), _O_U16TEXT);
+    //_setmode(_fileno(stdout), _O_WTEXT);
+    //Bai1();
+    //return 0;
+
 
     locale::global(locale("vi_VN.utf8"));
     wstring Str = L"Tiếng Việt";
-    wcout << Str << endl;
     //return 0;
     char yes;
     int n = 1;
     Str = inpWstring(L"Input file: ");
     wcout << "File inputed: " << Str << endl;
     wstring FileStr = L" ";
-    FileStr = fileWstring(Str.data());
+    FileStr = fileWstring(Str);
+    //string nameInp;
+    //nameInp = inpString("Input file not WIDE: ");
+    //cout << "File inputed: " << nameInp << endl;
+    //string FileStr = " ";
+    //FileStr = fileString(nameInp.data());
+
+
        /*
     printHelp();
     while (true)

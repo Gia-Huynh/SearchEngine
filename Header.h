@@ -9,17 +9,21 @@
 #include <stdio.h>
 #include <math.h>
 #include <cstdio>
-#include <algorithm>
-
+#include <sstream>
 #include <fstream>
 #include <io.h>
 #include <fcntl.h>
 #include <iostream>
+#include <codecvt>
+#include <algorithm>
 
 using namespace std;
 wstring inpWstring(const wchar_t message[]);
-wstring fileWstring(const wchar_t file_name[]);
-void Bai1();
+string WstringToString(wstring wStr);
+std::wstring readFile(string path);
+wstring fileWstring(wstring file_name);
+
+//void Bai1();
 void Bai2();
 void Bai3();
 void Bai4();
