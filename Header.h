@@ -16,6 +16,8 @@
 #include <iostream>
 #include <codecvt>
 #include <algorithm>
+#include <map>
+
 
 using namespace std;
 wstring inpWstring(const wchar_t message[]);

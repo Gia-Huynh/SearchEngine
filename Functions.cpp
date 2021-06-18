@@ -1,8 +1,8 @@
 ﻿#include "Header.h"
 
-wchar_t NotLegalW[] = {'\r', '\n' , '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
+wchar_t NotLegalW[] = {'\r', '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
 int len = sizeof(NotLegalW) / sizeof(wchar_t);
-char NotLegal[] = { '\r', '\n',  '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
+char NotLegal[] = { '\r',  '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
 
 string WstringToString(wstring wStr)
 {
@@ -141,17 +141,17 @@ wstring fileWstring(wstring file_name)
     wcout << L"S cleanWstring:\n" << s << "\n\n";
 
     //wcout << "LENGTH OF space: " << wstring(L" ").length() << "\n";
-    return s;
+    //return s;
     while (s.find(L"\n") < s.length()) { 
-        //wcout << static_cast<int>(s.find(L"\n")) << " " << sizeof(L"\n")-1 << "\n" << s << "\n";
-        s.replace(s.find(L"\n"), 1, L"T");
-        wcout << L"AAAAAAAAAAAAAAAAAA:\n" << s << "\n\n";
+        s.replace(s.find(L"\n"), 1, L" ");
     };
-    //s.replace(s.find(L'\n'), 1, L"R");
     wcout << L"S replace \\n:\n" << s << "\n\n";
 
     while (s.find(L"  ") < s.length()) { s.replace(s.find(L"  "), sizeof(L" ") - 2, L" "); };
-    wcout << L"S fucked:\n" << s << "\n\n";
+    wcout << L"S remove double space:\n" << s << "\n\n";
+
+    //std::transform(s.begin(), s.end(), s.begin(), ::tolower);
+    wcout << L"S lowercase (not working):\n" << s << "\n\n";
 
     return s;
 };
