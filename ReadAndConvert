@@ -1,0 +1,52 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+void  ReadFileBinary()
+{ 
+    FILE* f = fopen("input.txt", "rb");
+    FILE* f2 = fopen("output.txt", "wb");
+
+    uint16_t buffer;
+    uint16_t token[1001][21];
+    int n = 0, m = 0;
+    while (fread(&buffer, 2, 1, f)) {
+        printf("1\n");
+        if (buffer == 0x20 || buffer == 0x2e || buffer == 0x0d || buffer == 0x0a || buffer == 0x22 || buffer == 0x2c) {
+            if (m) {
+                fwrite(token[n], sizeof(uint16_t), m, f2);
+                buffer = 0x20;
+                fwrite(&buffer, sizeof(uint16_t), 1, f2);
+            }
+            n += m != 0; m = 0;
+            continue;
+        }
+        token[n][m++] = buffer;
+    }
+
+    fclose(f);
+    fclose(f2);
+}
+
+void convert()
+{
+    ifstream inp("output.txt", ios::binary);
+    ofstream out("a.out");
+
+    uint16_t buffer;
+    while (inp.read((char*)(&buffer), sizeof(uint16_t))) {
+        if (buffer == 0xfeff || buffer == 0x20) {
+            out << endl;
+            continue;
+        }
+        if (buffer <= 0x007f)
+            out << (char)(buffer);
+        else if (buffer <= 0x07ff)
+            out << (char)(0xc0 | ((buffer >> 6) & 0x1f)) << (char)(0x80 | (buffer & 0x3f));
+        else
+            out << (char)(0xe0 | ((buffer >> 12) & 0x0f)) << (char)(0x80 | ((buffer >> 6) & 0x3f)) << (char)(0x80 | (buffer & 0x3f));
+    }
+
+    inp.close(); out.close();
+}
