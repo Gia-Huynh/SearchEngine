@@ -17,9 +17,13 @@
 #include <codecvt>
 #include <algorithm>
 #include <map>
+#include <clocale>
+#include <unordered_set>
 
 
-using namespace std;
+using namespace std; 
+//std::unordered_set<std::wstring> stopwords;
+void ReadStopWords(const char filename[]);
 wstring inpWstring(const wchar_t message[]);
 string WstringToString(wstring wStr);
 std::wstring readFile(string path);

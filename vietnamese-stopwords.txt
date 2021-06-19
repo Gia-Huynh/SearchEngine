@@ -1,3 +1,6 @@
+www
+http
+https
 a lô
 a ha
 ai
