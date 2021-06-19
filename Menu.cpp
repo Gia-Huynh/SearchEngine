@@ -24,10 +24,12 @@ int main()
 
 
     locale::global(locale("vi_VN.utf8"));
+    std::setlocale(LC_ALL, "vi_VN.utf8");
     wstring Str = L"Tiếng Việt";
     //return 0;
     char yes;
     int n = 1;
+    ReadStopWords("vietnamese-stopwords.txt");
     Str = inpWstring(L"Input file: ");
     wcout << "File inputed: " << Str << endl;
     wstring FileStr = L" ";
