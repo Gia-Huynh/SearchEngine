@@ -151,8 +151,6 @@ wstring fileWstring(wstring file_name)
     s = cleanWstring(s);
     wcout << L"S cleanWstring:\n" << s << "\n\n";
 
-    //wcout << "LENGTH OF space: " << wstring(L" ").length() << "\n";
-    //return s;
     while (s.find(L"\n") < s.length()) { 
         s.replace(s.find(L"\n"), 1, L" ");
     };
@@ -166,25 +164,20 @@ wstring fileWstring(wstring file_name)
     wchar_t r; //replacement
     std::map<wchar_t, wchar_t> rs = {
         {L'Á',L'á'},{L'À',L'à'},{L'Ạ',L'ạ'},{L'Ả',L'ả'},{L'Ã',L'ã'},{L'Â',L'â'},{L'Ấ',L'ấ'},{L'Ầ',L'ầ'},{L'Ẩ',L'ẩ'},{L'Ẫ',L'ẫ'},
-{L'Ậ',L'ậ'},{L'Ă',L'ă'},{L'Ắ',L'ắ'},{L'Ằ',L'ằ'},{L'Ẳ',L'ẳ'},{L'Ẵ',L'ẵ'},{L'Ặ',L'ặ'},{L'É',L'é'},{L'È',L'è'},{L'Ẻ',L'ẻ'},
-{L'Ẽ',L'ẽ'},{L'Ẹ',L'ẹ'},{L'Ê',L'ê'},{L'Ế',L'ế'},{L'Ề',L'ề'},{L'Ệ',L'ệ'},{L'Ễ',L'ễ'},{L'Ể',L'ể'},{L'Ú',L'ú'},{L'Ù',L'ù'},
-{L'Ủ',L'ủ'},{L'Ũ',L'ũ'},{L'Ụ',L'ụ'},{L'Ư',L'ư'},{L'Ứ',L'ứ'},{L'Ừ',L'ừ'},{L'Ự',L'ự'},{L'Ử',L'ử'},{L'Ữ',L'ữ'},{L'Ó',L'ó'},
-{L'Ò',L'ò'},{L'Ỏ',L'ỏ'},{L'Õ',L'õ'},{L'Ọ',L'ọ'},{L'Ô',L'ô'},{L'Ố',L'ố'},{L'Ồ',L'ồ'},{L'Ổ',L'ổ'},{L'Ỗ',L'ỗ'},{L'Ộ',L'ộ'},
-{L'Ơ',L'ơ'},{L'Ớ',L'ớ'},{L'Ờ',L'ờ'},{L'Ợ',L'ợ'},{L'Ở',L'ở'},{L'Ỡ',L'ỡ'},{L'Í',L'í'},{L'Ì',L'ì'},{L'Ị',L'ị'},{L'Ỉ',L'ỉ'},
-{L'Ĩ',L'ĩ'},{L'Đ',L'đ'},{L'Ý',L'ý'},{L'Ỳ',L'ỳ'},{L'Ỷ',L'ỷ'},{L'Ỹ',L'ỹ'},{L'Ỵ',L'ỵ'},{L'Q',L'q'},{L'W',L'w'},{L'E',L'e'},
-{L'R',L'r'},{L'T',L't'},{L'Y',L'y'},{L'U',L'u'},{L'I',L'i'},{L'O',L'o'},{L'P',L'p'},{L'A',L'a'},{L'S',L's'},{L'D',L'd'},
-{L'F',L'f'},{L'G',L'g'},{L'H',L'h'},{L'J',L'j'},{L'K',L'k'},{L'L',L'l'},{L'Z',L'z'},{L'X',L'x'},{L'C',L'c'},{L'V',L'v'},
-{L'B',L'b'},{L'N',L'n'},{L'M',L'm'}
-        //{L'Á',L'À',L'Ạ',L'Ả',L'Ã',L'Â',L'Ấ',L'Ầ',L'Ẩ',L'Ẫ',L'Ậ',L'Ă',L'Ắ',L'Ằ',L'Ẳ',L'Ẵ',L'Ặ',L'É',L'È',L'Ẻ',L'Ẽ',L'Ẹ',L'Ê',L'Ế',L'Ề',L'Ệ',L'Ễ',L'Ể',L'Ú',L'Ù',L'Ủ',L'Ũ',L'Ụ',L'Ư',L'Ứ',L'Ừ',L'Ự',L'Ử',L'Ữ',L'Ó',L'Ò',L'Ỏ',L'Õ',L'Ọ',L'Ô',L'Ố',L'Ồ',L'Ổ',L'Ỗ',L'Ộ',L'Ơ',L'Ớ',L'Ờ',L'Ợ',L'Ở',L'Ỡ',L'Í',L'Ì',L'Ị',L'Ỉ',L'Ĩ',L'Đ',L'Ý',L'Ỳ',L'Ỷ',L'Ỹ',L'Ỵ'},
-        //{L'á',L'à',L'ạ',L'ả',L'ã',L'â',L'ấ',L'ầ',L'ẩ',L'ẫ',L'ậ',L'ă',L'ắ',L'ằ',L'ẳ',L'ẵ',L'ặ',L'é',L'è',L'ẻ',L'ẽ',L'ẹ',L'ê',L'ế',L'ề',L'ệ',L'ễ',L'ể',L'ú',L'ù',L'ủ',L'ũ',L'ụ',L'ư',L'ứ',L'ừ',L'ự',L'ử',L'ữ',L'ó',L'ò',L'ỏ',L'õ',L'ọ',L'ô',L'ố',L'ồ',L'ổ',L'ỗ',L'ộ',L'ơ',L'ớ',L'ờ',L'ợ',L'ở',L'ỡ',L'í',L'ì',L'ị',L'ỉ',L'ĩ',L'đ',L'ý',L'ỳ',L'ỷ',L'ỹ',L'ỵ'}
+        {L'Ậ',L'ậ'},{L'Ă',L'ă'},{L'Ắ',L'ắ'},{L'Ằ',L'ằ'},{L'Ẳ',L'ẳ'},{L'Ẵ',L'ẵ'},{L'Ặ',L'ặ'},{L'É',L'é'},{L'È',L'è'},{L'Ẻ',L'ẻ'},
+        {L'Ẽ',L'ẽ'},{L'Ẹ',L'ẹ'},{L'Ê',L'ê'},{L'Ế',L'ế'},{L'Ề',L'ề'},{L'Ệ',L'ệ'},{L'Ễ',L'ễ'},{L'Ể',L'ể'},{L'Ú',L'ú'},{L'Ù',L'ù'},
+        {L'Ủ',L'ủ'},{L'Ũ',L'ũ'},{L'Ụ',L'ụ'},{L'Ư',L'ư'},{L'Ứ',L'ứ'},{L'Ừ',L'ừ'},{L'Ự',L'ự'},{L'Ử',L'ử'},{L'Ữ',L'ữ'},{L'Ó',L'ó'},
+        {L'Ò',L'ò'},{L'Ỏ',L'ỏ'},{L'Õ',L'õ'},{L'Ọ',L'ọ'},{L'Ô',L'ô'},{L'Ố',L'ố'},{L'Ồ',L'ồ'},{L'Ổ',L'ổ'},{L'Ỗ',L'ỗ'},{L'Ộ',L'ộ'},
+        {L'Ơ',L'ơ'},{L'Ớ',L'ớ'},{L'Ờ',L'ờ'},{L'Ợ',L'ợ'},{L'Ở',L'ở'},{L'Ỡ',L'ỡ'},{L'Í',L'í'},{L'Ì',L'ì'},{L'Ị',L'ị'},{L'Ỉ',L'ỉ'},
+        {L'Ĩ',L'ĩ'},{L'Đ',L'đ'},{L'Ý',L'ý'},{L'Ỳ',L'ỳ'},{L'Ỷ',L'ỷ'},{L'Ỹ',L'ỹ'},{L'Ỵ',L'ỵ'},{L'Q',L'q'},{L'W',L'w'},{L'E',L'e'},
+        {L'R',L'r'},{L'T',L't'},{L'Y',L'y'},{L'U',L'u'},{L'I',L'i'},{L'O',L'o'},{L'P',L'p'},{L'A',L'a'},{L'S',L's'},{L'D',L'd'},
+        {L'F',L'f'},{L'G',L'g'},{L'H',L'h'},{L'J',L'j'},{L'K',L'k'},{L'L',L'l'},{L'Z',L'z'},{L'X',L'x'},{L'C',L'c'},{L'V',L'v'},
+        {L'B',L'b'},{L'N',L'n'},{L'M',L'm'}
     };
-    //std::wstring s = L"abracadabra";
     std::replace_if(s.begin(), s.end(), [&](wchar_t c) { return (rs.find(c) != rs.end())
         && (r = rs[c]); }, r);
 
     wcout << L"S lowercase (working?):\n" << s << "\n\n";
-    //Stopword removal: https://stackoverflow.com/questions/25337709/how-to-remove-all-words-in-a-list-from-a-fixed-list-of-candidates
-    //W H A T  T H E  F U C K?
     size_t pos;
     for (const auto& elem : stopwords) {
         pos = 0;
@@ -193,21 +186,12 @@ wstring fileWstring(wstring file_name)
             {
                 wcout << s[pos + i];
             };
-            wcout << " " << elem << "\n";
+            //wcout << " " << elem << "\n";
             s.erase(pos, elem.length()-1);
             pos += elem.length()-1;
         }
     }
 
-    //r = L' ';
-    //std::replace_if(s.begin(), s.end(), [&](wstring c) { return (stopwords.find(c) != stopwords.end()); }, r);
-    /*
-    s.erase(std::remove_if(
-        s.begin(),
-        s.end(),
-        [](const std::wstring& ss) { return stopwords.find(ss) != stopwords.end(); }),
-        s.end());
-        */
     wcout << L"S stopword removal:\n" << s << "\n\n";
     return s;
 };
