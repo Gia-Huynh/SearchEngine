@@ -57,6 +57,14 @@ wstring cleanWstring(wstring a)
     };
     return a;
 };
+string inpString(string message)
+{
+    wcout << StringToWstring ( message);
+    string s;
+    getline(std::cin, s);
+    //wcin >> s;
+    return s;
+};
 wstring inpWstring(const wchar_t message[])
 {
     _setmode(_fileno(stdin), _O_U16TEXT);
@@ -139,25 +147,25 @@ std::wstring readFile(string path)
     return utf16LeContent;
 }
 
-wstring fileWstring(wstring file_name)
+wstring fileWstring(string file_name)
 {
     _setmode(_fileno(stdout), _O_U16TEXT);
     locale::global(locale("vi_VN.utf8"));
     std::setlocale(LC_ALL, "vi_VN.utf8");
 
     wstring s;
-    s = readFile(WstringToString(file_name));
+    s = readFile(file_name);
     wcout << L"S OG:\n" << s << "\n\n";
     s = cleanWstring(s);
-    wcout << L"S cleanWstring:\n" << s << "\n\n";
+    //wcout << L"S cleanWstring:\n" << s << "\n\n";
 
     while (s.find(L"\n") < s.length()) { 
         s.replace(s.find(L"\n"), 1, L" ");
     };
-    wcout << L"S replace \\n:\n" << s << "\n\n";
+    //wcout << L"S replace \\n:\n" << s << "\n\n";
 
     while (s.find(L"  ") < s.length()) { s.replace(s.find(L"  "), sizeof(L" ") - 2, L" "); };
-    wcout << L"S remove double space:\n" << s << "\n\n";
+    //wcout << L"S remove double space:\n" << s << "\n\n";
 
 
 
@@ -177,15 +185,15 @@ wstring fileWstring(wstring file_name)
     std::replace_if(s.begin(), s.end(), [&](wchar_t c) { return (rs.find(c) != rs.end())
         && (r = rs[c]); }, r);
 
-    wcout << L"S lowercase (working?):\n" << s << "\n\n";
+    //wcout << L"S lowercase (working?):\n" << s << "\n\n";
     size_t pos;
     for (const auto& elem : stopwords) {
         pos = 0;
         while ((pos = s.find(elem, pos)) != std::wstring::npos) {
-            for (int i = 0; i < elem.length(); i++)
-            {
-                wcout << s[pos + i];
-            };
+            //for (int i = 0; i < elem.length(); i++)
+            //{
+            //    wcout << s[pos + i];
+            //};
             //wcout << " " << elem << "\n";
             s.erase(pos, elem.length()-1);
             pos += elem.length()-1;
@@ -198,14 +206,6 @@ wstring fileWstring(wstring file_name)
 
 
 /*
-string inpString(const char message[])
-{
-    printf(message);
-    string s;
-    getline(std::cin, s);
-    //wcin >> s;
-    return s;
-};
 bool IllegalChar(char c)
 {
     for (int i = 0; i < len; i++)

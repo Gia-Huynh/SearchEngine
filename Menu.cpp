@@ -16,24 +16,71 @@ void printHelp()
 };
 int main()
 {
-    _setmode(_fileno(stdin), _O_U16TEXT);
+    //_setmode(_fileno(stdin), _O_U16TEXT);
     //_setmode(_fileno(stdout), _O_U16TEXT);
     //_setmode(_fileno(stdout), _O_WTEXT);
     //Bai1();
     //return 0;
 
-
-    locale::global(locale("vi_VN.utf8"));
-    std::setlocale(LC_ALL, "vi_VN.utf8");
-    wstring Str = L"Tiếng Việt";
+    string IndexPath = "Yes";
+    string FolderPath;
     //return 0;
     char yes;
     int n = 1;
     ReadStopWords("vietnamese-stopwords.txt");
-    Str = inpWstring(L"Input file: ");
-    wcout << "File inputed: " << Str << endl;
-    wstring FileStr = L" ";
-    FileStr = fileWstring(Str);
+    IndexPath = inpString("index.txt file location: ");
+    //Str = inpString("Input file: ");
+    wcout << L"String inputed: " << StringToWstring(IndexPath) << endl;
+
+    if ((IndexPath.length() >= 9) && (IndexPath.substr(max (1, IndexPath.length() - 8))) == "ndex.txt")
+        FolderPath = IndexPath.substr(0, IndexPath.length() - 9);
+    else
+    {
+        if (IndexPath.substr(IndexPath.length() - 1) != "\\")
+            IndexPath.push_back('\\');
+            //IndexPath = IndexPath + "/";
+        FolderPath = IndexPath;
+        IndexPath = IndexPath.substr(0, string::npos) + "index.txt";
+    };
+    wcout << L"Index.txt location: " << StringToWstring(IndexPath) << endl;
+    wcout << L"Folder path: " << StringToWstring(FolderPath) << endl;
+        
+
+    ifstream IndexStream; 
+    IndexStream.open(IndexPath);
+
+    //ifstream == 1 if fail, == 0 if success
+    if (!IndexStream)
+    {
+        wcout << "index.txt open failure, recheck file name? (index.txt, khong phai Index)\n";
+        exit(EXIT_FAILURE);
+    }
+
+    string TxtFile;
+    wcout << "Getting index.txt data....\n";
+    while ((getline(IndexStream, TxtFile))) {
+        wcout << StringToWstring(TxtFile) << "\n";
+        fileWstring(FolderPath + TxtFile);
+    }
+    IndexStream.close();
+    return 0;
+    //if (TxtFile)
+    //    free(TxtFile);
+
+
+
+
+
+
+    locale::global(locale("vi_VN.utf8"));
+    std::setlocale(LC_ALL, "vi_VN.utf8");
+
+    //wstring FileStr = fileWstring(Str);
+    
+    
+    
+    ///Below this line is full of shit
+    /// 
     //string nameInp;
     //nameInp = inpString("Input file not WIDE: ");
     //cout << "File inputed: " << nameInp << endl;

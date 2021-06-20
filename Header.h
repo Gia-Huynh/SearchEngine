@@ -25,9 +25,11 @@ using namespace std;
 //std::unordered_set<std::wstring> stopwords;
 void ReadStopWords(const char filename[]);
 wstring inpWstring(const wchar_t message[]);
+string inpString(string message);
 string WstringToString(wstring wStr);
+wstring StringToWstring(string Str);
 std::wstring readFile(string path);
-wstring fileWstring(wstring file_name);
+wstring fileWstring(string file_name);
 
 //void Bai1();
 void Bai2();
