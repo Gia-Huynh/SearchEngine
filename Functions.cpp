@@ -155,7 +155,7 @@ wstring fileWstring(string file_name)
 
     wstring s;
     s = readFile(file_name);
-    wcout << L"S OG:\n" << s << "\n\n";
+    //wcout << L"S OG:\n" << s << "\n\n";
     s = cleanWstring(s);
     //wcout << L"S cleanWstring:\n" << s << "\n\n";
 
@@ -186,21 +186,17 @@ wstring fileWstring(string file_name)
         && (r = rs[c]); }, r);
 
     //wcout << L"S lowercase (working?):\n" << s << "\n\n";
+    //stopword removal
     size_t pos;
     for (const auto& elem : stopwords) {
         pos = 0;
         while ((pos = s.find(elem, pos)) != std::wstring::npos) {
-            //for (int i = 0; i < elem.length(); i++)
-            //{
-            //    wcout << s[pos + i];
-            //};
-            //wcout << " " << elem << "\n";
             s.erase(pos, elem.length()-1);
             pos += elem.length()-1;
         }
     }
 
-    wcout << L"S stopword removal:\n" << s << "\n\n";
+    //wcout << L"S stopword removal:\n" << s << "\n\n";
     return s;
 };
 

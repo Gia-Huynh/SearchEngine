@@ -58,8 +58,16 @@ int main()
 
     string TxtFile;
     wcout << "Getting index.txt data....\n";
+    long int fileNums = 0;
+    long int fileCurrentNums = 0;
     while ((getline(IndexStream, TxtFile))) {
-        wcout << StringToWstring(TxtFile) << "\n";
+        fileNums++;
+    }
+    IndexStream.clear();
+    IndexStream.seekg(0);
+    while ((getline(IndexStream, TxtFile))) {
+        fileCurrentNums++;
+        wcout << StringToWstring(TxtFile) << " " << fileCurrentNums << "/" << fileNums << "\n";
         fileWstring(FolderPath + TxtFile);
     }
     IndexStream.close();
