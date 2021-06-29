@@ -16,37 +16,37 @@ void printHelp()
 };
 int main()
 {
-    //_setmode(_fileno(stdin), _O_U16TEXT);
+    _setmode(_fileno(stdin), _O_U16TEXT);
+    locale::global(locale("vi_VN.utf8"));
+    std::setlocale(LC_ALL, "vi_VN.utf8");
     //_setmode(_fileno(stdout), _O_U16TEXT);
     //_setmode(_fileno(stdout), _O_WTEXT);
-    //Bai1();
-    //return 0;
 
-    string IndexPath = "Yes";
-    string FolderPath;
+    ReadStopWords("vietnamese-stopwords.txt");
+    wstring IndexPath = L"Yes";
+    wstring FolderPath;
     //return 0;
     char yes;
     int n = 1;
-    ReadStopWords("vietnamese-stopwords.txt");
-    IndexPath = inpString("index.txt file location: ");
+    IndexPath = inpWstring(L"index.txt file location: ");
     //Str = inpString("Input file: ");
-    wcout << L"String inputed: " << StringToWstring(IndexPath) << endl;
+    wcout << L"String inputed: " <<  IndexPath << endl;
 
-    if ((IndexPath.length() >= 9) && (IndexPath.substr(max (1, IndexPath.length() - 8))) == "ndex.txt")
+    if ((IndexPath.length() >= 9) && (IndexPath.substr(max (1, IndexPath.length() - 8))) == L"ndex.txt")
         FolderPath = IndexPath.substr(0, IndexPath.length() - 9);
     else
     {
-        if (IndexPath.substr(IndexPath.length() - 1) != "\\")
+        if (IndexPath.substr(IndexPath.length() - 1) != L"\\")
             IndexPath.push_back('\\');
             //IndexPath = IndexPath + "/";
         FolderPath = IndexPath;
-        IndexPath = IndexPath.substr(0, string::npos) + "index.txt";
+        IndexPath = IndexPath.substr(0, string::npos) + L"index.txt";
     };
-    wcout << L"Index.txt location: " << StringToWstring(IndexPath) << endl;
-    wcout << L"Folder path: " << StringToWstring(FolderPath) << endl;
+    wcout << L"Index.txt location: " << IndexPath << endl;
+    wcout << L"Folder path: " << FolderPath << endl;
         
 
-    ifstream IndexStream; 
+    wifstream IndexStream; 
     IndexStream.open(IndexPath);
 
     //ifstream == 1 if fail, == 0 if success
@@ -56,21 +56,32 @@ int main()
         exit(EXIT_FAILURE);
     }
 
-    string TxtFile;
+    wstring TxtFile;
+    wstring data;
     wcout << "Getting index.txt data....\n";
-    long int fileNums = 0;
-    long int fileCurrentNums = 0;
+    long long fileNums = 0;
+    long long fileCurrentNums = 0;
     while ((getline(IndexStream, TxtFile))) {
         fileNums++;
     }
     IndexStream.clear();
     IndexStream.seekg(0);
+
+
+    long long t0 = time(NULL);
+    long long t1;
+    wcout << "Reading files....\n";
     while ((getline(IndexStream, TxtFile))) {
         fileCurrentNums++;
-        wcout << StringToWstring(TxtFile) << " " << fileCurrentNums << "/" << fileNums << "\n";
-        fileWstring(FolderPath + TxtFile);
+        t1 = time(NULL);
+        if (fileCurrentNums % 50 == 0) wcout << TxtFile << " " << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1-t0) * (fileNums - fileCurrentNums)))  / fileCurrentNums << "s\n";
+        data = fileWstring(WstringToString( FolderPath + TxtFile)); 
+        //data = StopwordRemove(data);
+        //FeatureSelection(data);
     }
     IndexStream.close();
+    t1 = time(NULL);
+    wcout << "Total time elapsed: " << t1 - t0 <<"\n";
     return 0;
     //if (TxtFile)
     //    free(TxtFile);
@@ -80,8 +91,6 @@ int main()
 
 
 
-    locale::global(locale("vi_VN.utf8"));
-    std::setlocale(LC_ALL, "vi_VN.utf8");
 
     //wstring FileStr = fileWstring(Str);
     

@@ -17,19 +17,22 @@
 #include <codecvt>
 #include <algorithm>
 #include <map>
-#include <clocale>
+#include <unordered_map>
 #include <unordered_set>
-
+#include <clocale>
+#include <time.h>
 
 using namespace std; 
 //std::unordered_set<std::wstring> stopwords;
 void ReadStopWords(const char filename[]);
-wstring inpWstring(const wchar_t message[]);
+wstring inpWstring(wstring message);
 string inpString(string message);
 string WstringToString(wstring wStr);
 wstring StringToWstring(string Str);
 std::wstring readFile(string path);
 wstring fileWstring(string file_name);
+map<wstring, int> FeatureSelection(wstring InputString);
+wstring StopwordRemove(wstring InputString);
 
 //void Bai1();
 void Bai2();

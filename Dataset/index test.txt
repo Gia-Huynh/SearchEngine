@@ -1,0 +1,4 @@
+new test/Am nhac/AN_TN_T_ (761).txt
+new test/Am nhac/AN_TN_T_ (762) .txt
+vietnamese-stopwords .txt
+new test/Giao duc/GDu_TT_T_ (467)    .txt
