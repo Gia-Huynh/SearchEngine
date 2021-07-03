@@ -29,11 +29,11 @@ wstring inpWstring(wstring message);
 string inpString(string message);
 string WstringToString(wstring wStr);
 wstring StringToWstring(string Str);
-std::wstring readFile(string path);
-wstring fileWstring(string file_name);
+std::wstring readFile(wstring path);
+wstring fileWstring(wstring file_name);
 map<wstring, int> FeatureSelection(wstring InputString);
 wstring StopwordRemove(wstring InputString);
-
+int SaveFeatureToFile(map<wstring, int>& FeatureMap, wstring filename);
 //void Bai1();
 void Bai2();
 void Bai3();

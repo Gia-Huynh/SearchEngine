@@ -99,7 +99,7 @@ wstring inpWstring(wstring message)
 
 
 
-std::wstring readFile(string path)
+std::wstring readFile(wstring path)
 //https://vicidi.wordpress.com/2015/03/09/reading-utf-file-with-bom-to-utf-8-encoded-stdstring-in-c11-on-windows/
 {
     std::string result;
@@ -113,27 +113,27 @@ std::wstring readFile(string path)
         return L"";
     }
     else if (ifs.eof()) {
+        // Empty file
         result.clear();
     }
     else {
         int ch1 = ifs.get();
         int ch2 = ifs.get();
         if (ch1 == 0xff && ch2 == 0xfe) {
-            // The file contains UTF-16LE BOM
+            // UTF-16LE BOM
             encoding = ENCODING_UTF16LE;
         }
         else if (ch1 == 0xfe && ch2 == 0xff) {
-            // The file contains UTF-16BE BOM
+            // UTF-16BE BOM
             encoding = ENCODING_UTF16BE;
         }
         else {
             int ch3 = ifs.get();
             if (ch1 == 0xef && ch2 == 0xbb && ch3 == 0xbf) {
-                // The file contains UTF-8 BOM
+                // UTF-8 BOM
                 encoding = ENCODING_UTF8;
             }
             else {
-                // The file does not have BOM
                 encoding = ENCODING_ASCII;
                 ifs.seekg(0);
             }
@@ -163,7 +163,7 @@ std::wstring readFile(string path)
     return utf16LeContent;
 }
 
-wstring fileWstring(string file_name)
+wstring fileWstring(wstring file_name)
 {
     _setmode(_fileno(stdout), _O_U16TEXT);
     locale::global(locale("vi_VN.utf8"));
@@ -319,7 +319,10 @@ map<wstring, int> FeatureSelection(wstring InputString)
     //wcout << count << " YES \n";
     return gay;
 };
-
+int SaveFeatureToFile(map<wstring, int> &FeatureMap, wstring filename)
+{
+    return 1;
+};
 
 /*
 bool IllegalChar(char c)

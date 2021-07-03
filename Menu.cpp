@@ -66,7 +66,8 @@ int main()
     }
     IndexStream.clear();
     IndexStream.seekg(0);
-
+    
+    map<wstring, int> FeatureMap;
 
     long long t0 = time(NULL);
     long long t1;
@@ -75,9 +76,11 @@ int main()
         fileCurrentNums++;
         t1 = time(NULL);
         if (fileCurrentNums % 50 == 0) wcout << TxtFile << " " << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1-t0) * (fileNums - fileCurrentNums)))  / fileCurrentNums << "s\n";
-        data = fileWstring(WstringToString( FolderPath + TxtFile)); 
-        //data = StopwordRemove(data);
-        //FeatureSelection(data);
+        //data = fileWstring(WstringToString( FolderPath + TxtFile)); 
+        data = fileWstring((FolderPath + TxtFile));
+        data = StopwordRemove(data);
+        FeatureMap = FeatureSelection(data);
+        SaveFeatureToFile(FeatureMap, L"metadata.txt");
     }
     IndexStream.close();
     t1 = time(NULL);
