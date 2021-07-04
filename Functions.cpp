@@ -61,11 +61,11 @@ wstring cleanWstring(wstring a)
     i = 1;
     while (i < len)
     {
-        //if (IllegalChar(a[i]))
-        //{
-        //    a.replace(i, 1, L" ");
-        //} else i++;
-        i++; //testing speed
+        if (IllegalChar(a[i]))
+        {
+             a.replace(i, 1, L" ");
+        } else i++;
+        //i++; //testing speed
 
         if ((a[i] == ' ') && (a[i - 1] == ' '))
         {
@@ -91,11 +91,6 @@ wstring inpWstring(wstring message)
     getline(std::wcin, s);
     return s;
 };
-
-#define ENCODING_ASCII      0
-#define ENCODING_UTF8       1
-#define ENCODING_UTF16LE    2
-#define ENCODING_UTF16BE    3
 
 
 
@@ -319,11 +314,58 @@ map<wstring, int> FeatureSelection(wstring InputString)
     //wcout << count << " YES \n";
     return gay;
 };
-int SaveFeatureToFile(map<wstring, int> &FeatureMap, wstring filename)
+int FeatureMapListSave(map<wstring, map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
 {
-    return 1;
-};
+    _setmode(_fileno(stdout), _O_U16TEXT);
+    locale::global(locale("vi_VN.utf8"));
+    std::setlocale(LC_ALL, "vi_VN.utf8");
+    std::string result;
+    std::wofstream ofs(filename, std::ios::binary);
 
+    if (!ofs.is_open()) {
+        // Unable to write file
+        return 2;
+    }
+    else
+    {
+        for (const auto& p : FeatureMapList)
+        {
+            std::wcout << p.first << std::endl;
+            ofs << p.first<<",0\n";
+            for (const auto& pp : p.second)
+            {
+                ofs << pp.first << "," << pp.second <<"\n";
+            };
+
+        };
+    };
+    return 0;
+};
+int FeatureMapListRead(map<wstring, map<wstring, int>>& FeatureMapList, wstring filename)
+{
+    wstring gay = readFile(filename);
+    if (gay.empty()) return 1;
+    wstring temp;
+    wstring name;
+    int temp2;
+    wistringstream gayy (gay);
+    map<wstring, int > FeatureMap;
+
+    std::getline(gayy, name, L',');
+    gayy >> temp2;
+    while (gayy)
+    {
+        std::getline(gayy, temp, L',');
+        gayy >> temp2;
+        if (temp2 == 0)
+        {
+            FeatureMapList.insert({name, FeatureMap});
+            name = temp;
+        };
+        FeatureMap.insert({ temp, temp2 });
+    };
+    return 0;
+};
 /*
 bool IllegalChar(char c)
 {

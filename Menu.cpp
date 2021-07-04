@@ -68,6 +68,7 @@ int main()
     IndexStream.seekg(0);
     
     map<wstring, int> FeatureMap;
+    map<wstring, map<wstring, int>> FeatureMapList;
 
     long long t0 = time(NULL);
     long long t1;
@@ -80,8 +81,9 @@ int main()
         data = fileWstring((FolderPath + TxtFile));
         data = StopwordRemove(data);
         FeatureMap = FeatureSelection(data);
-        SaveFeatureToFile(FeatureMap, L"metadata.txt");
+        FeatureMapList[FolderPath + TxtFile] = FeatureMap;
     }
+    SaveToFile(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
     IndexStream.close();
     t1 = time(NULL);
     wcout << "Total time elapsed: " << t1 - t0 <<"\n";

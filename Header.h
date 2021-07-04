@@ -21,6 +21,13 @@
 #include <unordered_set>
 #include <clocale>
 #include <time.h>
+#include <vector>
+
+
+#define ENCODING_ASCII      0
+#define ENCODING_UTF8       1
+#define ENCODING_UTF16LE    2
+#define ENCODING_UTF16BE    3
 
 using namespace std; 
 //std::unordered_set<std::wstring> stopwords;
@@ -33,7 +40,7 @@ std::wstring readFile(wstring path);
 wstring fileWstring(wstring file_name);
 map<wstring, int> FeatureSelection(wstring InputString);
 wstring StopwordRemove(wstring InputString);
-int SaveFeatureToFile(map<wstring, int>& FeatureMap, wstring filename);
+int SaveToFile(map<wstring, map<wstring, int>>& FeatureMap, wstring filename, int encoding = ENCODING_UTF8);
 //void Bai1();
 void Bai2();
 void Bai3();
