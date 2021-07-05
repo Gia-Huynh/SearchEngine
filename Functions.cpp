@@ -169,11 +169,12 @@ wstring fileWstring(wstring file_name)
 
     //wcout << L"S OG:\n" << s << "\n\n";
     s = cleanWstring(s); // 202-49 = 153s
+
     //wcout << L"S cleanWstring:\n" << s << "\n\n";
-    return s;
     wchar_t r; //replacement
     std::replace_if(s.begin(), s.end(), [&](wchar_t c) { return (rs.find(c) != rs.end())
         && (r = rs[c]); }, r); //287 - 202 = 85s
+    //wcout << L"S stopword removal:\n" << s << "\n\n";
 
     //wcout << L"S lowercase (working?):\n" << s << "\n\n"; 
     //stopword removal
@@ -186,7 +187,6 @@ wstring fileWstring(wstring file_name)
     //    }
     //}
 
-    //wcout << L"S stopword removal:\n" << s << "\n\n";
     return s;
 };
 
@@ -245,6 +245,7 @@ wstring StopwordRemove(wstring InputString)
 };
 map<wstring, int> FeatureSelection(wstring InputString)
 {
+    //wcout << "input string: " << InputString << "\n";
     wstring word;
     wstring word_2;
     wstring word_3;
@@ -285,6 +286,7 @@ map<wstring, int> FeatureSelection(wstring InputString)
     {
         //if (stopwords.find(word) != stopwords.end()) continue;
         gay[word]++;
+        //std::wcout << "[word]" << word << "Gay [word]: " << gay[word] << "\n";
         gay[word_2 + L' ' + word]++;
         gay[word_3 + L' ' + word_2 + L' ' + word]++;
         gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
@@ -312,10 +314,16 @@ map<wstring, int> FeatureSelection(wstring InputString)
             //count = count + 1;
     //};
     //wcout << count << " YES \n";
-
+    bool checkBreak = false;
     for (std::map<wstring, int>::iterator it = gay.begin(); it != gay.end(); ++it) {
-        std::wcout << "Key: " << it->first << "\n";
-        std::wcout << "Value: " << it->second << "\n";
+        while (it->second < 3)
+        {
+            //wcout << "Test " << it->first;
+            it = gay.erase(it);
+            if (it == gay.end()) { checkBreak = true; break; };
+            //wcout << "   " << it->first << "\n";
+        };
+        if (checkBreak) break;
     }
 
     return gay;
@@ -336,7 +344,7 @@ int FeatureMapListSave(map<wstring, map<wstring, int>> &FeatureMapList, wstring 
     {
         for (const auto& p : FeatureMapList)
         {
-            std::wcout << p.first << std::endl;
+            //std::wcout << p.first << std::endl;
             ofs << p.first<<",0\r\n";
             for (const auto& pp : p.second)
             {

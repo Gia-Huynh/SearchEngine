@@ -79,10 +79,13 @@ int main()
         if (fileCurrentNums % 50 == 0) wcout << TxtFile << " " << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1-t0) * (fileNums - fileCurrentNums)))  / fileCurrentNums << "s\n";
         //data = fileWstring(WstringToString( FolderPath + TxtFile)); 
         data = fileWstring((FolderPath + TxtFile));
+        //wcout << "____________________\n";
+        //wcout << data << "\n";
         data = StopwordRemove(data);
+        //wcout << data << "\n";
         FeatureMap = FeatureSelection(data);
         FeatureMapList[FolderPath + TxtFile] = FeatureMap;
-        wcout << "test2: " << FeatureMap.begin()->first << "\n";
+        //wcout << "test2: " << FeatureMap.begin()->first << "\n";
     }
     FeatureMapListSave(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
     IndexStream.close();
