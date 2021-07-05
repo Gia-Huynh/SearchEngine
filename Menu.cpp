@@ -82,21 +82,15 @@ int main()
         data = StopwordRemove(data);
         FeatureMap = FeatureSelection(data);
         FeatureMapList[FolderPath + TxtFile] = FeatureMap;
+        wcout << "test2: " << FeatureMap.begin()->first << "\n";
     }
-    SaveToFile(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
+    FeatureMapListSave(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
     IndexStream.close();
     t1 = time(NULL);
     wcout << "Total time elapsed: " << t1 - t0 <<"\n";
     return 0;
     //if (TxtFile)
     //    free(TxtFile);
-
-
-
-
-
-
-
     //wstring FileStr = fileWstring(Str);
     
     

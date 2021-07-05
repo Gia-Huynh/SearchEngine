@@ -40,7 +40,7 @@ std::wstring readFile(wstring path);
 wstring fileWstring(wstring file_name);
 map<wstring, int> FeatureSelection(wstring InputString);
 wstring StopwordRemove(wstring InputString);
-int SaveToFile(map<wstring, map<wstring, int>>& FeatureMap, wstring filename, int encoding = ENCODING_UTF8);
+int FeatureMapListSave(map<wstring, map<wstring, int>>& FeatureMapList, wstring filename, int encoding);
 //void Bai1();
 void Bai2();
 void Bai3();

@@ -200,7 +200,7 @@ wstring StopwordRemove(wstring InputString)
     wstring word_3 = L"";
     wstring word_4 = L"";
     wistringstream iss(InputString, wistringstream::in);
-    long long pos = 0;
+    unsigned int pos = 0;
     while (iss >> word)
     {
         pos = pos + word.length();
@@ -312,6 +312,12 @@ map<wstring, int> FeatureSelection(wstring InputString)
             //count = count + 1;
     //};
     //wcout << count << " YES \n";
+
+    for (std::map<wstring, int>::iterator it = gay.begin(); it != gay.end(); ++it) {
+        std::wcout << "Key: " << it->first << "\n";
+        std::wcout << "Value: " << it->second << "\n";
+    }
+
     return gay;
 };
 int FeatureMapListSave(map<wstring, map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
@@ -331,10 +337,10 @@ int FeatureMapListSave(map<wstring, map<wstring, int>> &FeatureMapList, wstring 
         for (const auto& p : FeatureMapList)
         {
             std::wcout << p.first << std::endl;
-            ofs << p.first<<",0\n";
+            ofs << p.first<<",0\r\n";
             for (const auto& pp : p.second)
             {
-                ofs << pp.first << "," << pp.second <<"\n";
+                ofs << pp.first << "," << pp.second <<"\r\n";
             };
 
         };
@@ -364,6 +370,44 @@ int FeatureMapListRead(map<wstring, map<wstring, int>>& FeatureMapList, wstring 
         };
         FeatureMap.insert({ temp, temp2 });
     };
+    return 0;
+};
+int Search(map<wstring, map<wstring, int>>& FeatureMapList, wstring KeyWord)
+{
+    wstring word = L"";
+    wstring word_2 = L"";
+    wstring word_3 = L"";
+    wstring word_4 = L"";
+    wistringstream iss(KeyWord, wistringstream::in);
+    int count;
+    int max = 0;
+    //auto maxIndex;
+    wstring maxIndex;
+    for (const auto& p : FeatureMapList)
+    {
+        count = 0;
+        iss.seekg(0);
+        wstring word = L"";
+        wstring word_2 = L"";
+        wstring word_3 = L"";
+        wstring word_4 = L"";
+        while (iss >> word)
+        {
+            if (p.second.find(word) != p.second.end())
+            {
+                count += p.second.find(word)->second;
+            };
+            word_4 = word_3;
+            word_3 = word_2;
+            word_2 = word;
+        };
+        if (max < count)
+        {
+            max = count;
+            maxIndex = p.first;
+        };
+    };
+    wcout << "ket qua: " << maxIndex << "\n";
     return 0;
 };
 /*

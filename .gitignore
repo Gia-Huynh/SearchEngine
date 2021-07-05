@@ -41,3 +41,9 @@ TestLowerCase.txt
 .vs/SearchEngine/v16/Browse.VC.opendb
 .vs/SearchEngine/v16/ipch/AutoPCH/284186720d07cce9/FUNCTIONS.ipch
 .vs/SearchEngine/v16/ipch/AutoPCH/f04bb24e741495ad/MENU.ipch
+Debug/SearchEngine.pdb
+Debug/SearchEngine.tlog/link-cvtres.read.1.tlog
+Debug/SearchEngine.tlog/link-cvtres.write.1.tlog
+Debug/SearchEngine.tlog/link-rc.read.1.tlog
+Debug/SearchEngine.tlog/link-rc.write.1.tlog
+Debug/SearchEngine.tlog/unsuccessfulbuild

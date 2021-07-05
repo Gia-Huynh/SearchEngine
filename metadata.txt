@@ -1,0 +1,3252 @@
+dataset\new test\Am nhac\AN_NLD_T_ (759).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (761).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (762).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (763).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (764).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (765).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (766).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (767).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (768).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (769).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (770).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (771).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (772).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (773).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (774).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (775).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (776).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (777).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (778).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (779).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (780).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (781).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (782).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (783).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (784).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (785).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (786).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (787).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (788).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (789).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (790).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (791).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (792).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (793).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (794).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (795).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (796).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (797).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (798).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (799).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (800).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (801).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (802).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (803).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_ (804).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TN_T_(760).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (805).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (806).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (807).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (808).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (809).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (810).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (811).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (812).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_TT_T_ (813).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (1).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (10).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (100).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (101).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (102).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (103).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (104).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (105).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (106).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (107).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (108).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (109).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (11).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (110).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (111).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (112).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (113).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (114).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (115).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (116).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (117).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (118).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (119).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (12).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (120).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (121).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (122).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (123).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (124).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (125).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (126).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (127).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (128).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (129).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (13).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (130).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (131).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (132).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (133).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (134).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (135).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (136).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (137).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (138).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (139).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (14).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (140).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (141).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (142).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (143).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (144).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (145).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (146).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (147).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (148).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (149).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (15).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (150).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (151).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (152).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (153).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (154).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (155).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (156).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (157).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (158).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (159).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (16).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (160).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (161).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (162).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (163).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (164).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (165).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (166).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (167).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (168).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (169).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (17).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (170).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (171).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (172).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (173).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (174).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (175).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (176).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (177).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (178).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (179).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (18).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (180).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (181).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (182).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (183).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (184).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (185).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (186).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (187).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (188).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (189).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (19).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (190).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (191).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (192).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (193).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (194).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (195).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (196).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (197).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (198).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (199).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (2).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (20).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (200).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (201).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (202).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (203).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (204).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (205).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (206).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (207).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (208).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (209).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (21).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (210).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (211).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (212).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (213).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (214).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (215).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (216).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (217).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (218).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (219).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (22).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (220).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (221).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (222).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (223).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (224).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (225).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (226).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (227).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (228).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (229).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (23).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (230).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (231).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (232).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (233).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (234).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (235).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (236).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (237).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (238).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (239).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (24).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (240).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (241).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (242).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (243).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (244).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (245).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (246).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (247).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (248).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (249).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (25).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (250).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (251).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (252).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (253).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (254).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (255).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (256).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (257).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (258).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (259).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (26).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (260).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (261).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (262).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (263).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (264).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (265).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (266).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (267).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (268).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (269).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (27).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (270).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (271).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (272).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (273).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (274).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (275).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (276).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (277).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (278).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (279).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (28).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (280).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (281).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (282).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (283).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (284).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (285).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (286).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (287).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (288).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (289).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (29).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (290).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (291).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (292).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (293).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (294).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (295).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (296).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (297).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (298).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (299).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (3).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (30).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (300).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (301).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (302).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (303).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (304).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (305).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (306).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (307).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (308).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (309).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (31).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (310).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (311).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (312).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (313).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (314).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (315).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (316).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (317).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (318).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (319).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (32).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (320).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (321).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (322).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (323).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (324).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (325).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (326).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (327).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (328).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (329).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (33).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (330).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (331).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (332).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (333).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (334).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (335).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (336).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (337).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (338).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (339).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (34).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (340).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (341).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (342).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (343).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (344).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (345).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (346).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (347).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (348).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (349).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (35).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (350).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (351).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (352).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (353).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (354).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (355).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (356).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (357).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (358).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (359).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (36).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (360).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (361).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (362).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (363).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (364).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (365).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (366).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (367).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (368).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (369).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (37).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (370).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (371).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (372).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (373).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (374).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (375).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (376).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (377).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (378).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (379).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (38).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (380).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (381).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (382).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (383).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (384).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (385).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (386).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (387).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (388).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (389).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (39).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (390).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (391).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (392).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (393).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (394).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (395).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (396).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (397).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (398).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (399).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (4).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (40).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (400).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (401).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (402).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (403).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (404).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (405).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (406).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (407).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (408).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (409).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (41).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (410).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (411).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (412).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (413).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (414).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (415).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (416).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (417).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (418).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (419).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (42).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (420).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (421).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (422).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (423).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (424).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (425).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (426).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (427).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (428).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (429).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (43).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (430).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (431).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (432).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (433).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (434).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (435).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (436).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (437).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (438).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (439).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (44).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (440).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (441).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (442).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (443).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (444).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (445).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (446).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (447).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (448).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (449).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (45).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (450).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (451).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (452).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (453).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (454).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (455).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (456).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (457).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (458).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (459).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (46).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (460).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (461).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (462).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (463).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (464).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (465).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (466).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (467).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (468).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (469).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (47).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (470).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (471).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (472).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (473).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (474).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (475).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (476).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (477).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (478).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (479).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (48).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (480).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (481).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (482).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (483).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (484).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (485).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (486).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (487).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (488).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (489).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (49).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (490).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (491).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (492).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (493).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (494).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (495).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (496).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (497).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (498).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (499).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (5).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (50).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (500).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (501).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (502).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (503).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (504).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (505).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (506).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (507).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (508).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (509).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (51).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (510).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (511).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (512).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (513).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (514).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (515).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (516).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (517).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (518).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (519).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (52).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (520).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (521).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (522).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (523).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (524).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (525).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (526).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (527).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (528).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (529).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (53).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (530).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (531).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (532).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (533).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (534).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (535).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (536).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (537).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (538).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (539).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (54).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (540).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (541).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (542).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (543).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (544).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (545).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (546).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (547).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (548).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (549).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (55).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (550).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (551).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (552).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (553).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (554).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (555).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (556).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (557).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (558).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (559).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (56).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (560).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (561).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (562).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (563).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (564).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (565).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (566).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (567).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (568).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (569).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (57).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (570).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (571).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (572).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (573).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (574).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (575).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (576).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (577).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (578).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (579).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (58).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (580).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (581).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (582).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (583).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (584).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (585).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (586).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (587).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (588).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (589).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (59).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (590).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (591).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (592).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (593).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (594).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (595).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (596).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (597).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (598).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (599).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (6).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (60).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (600).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (601).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (602).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (603).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (604).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (605).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (606).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (607).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (608).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (609).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (61).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (610).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (611).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (612).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (613).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (614).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (615).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (616).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (617).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (618).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (619).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (62).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (620).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (621).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (622).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (623).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (624).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (625).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (626).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (627).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (628).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (629).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (63).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (630).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (631).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (632).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (633).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (634).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (635).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (636).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (637).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (638).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (639).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (64).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (640).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (641).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (642).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (643).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (644).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (645).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (646).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (647).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (648).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (649).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (65).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (650).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (651).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (652).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (653).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (654).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (655).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (656).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (657).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (658).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (659).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (66).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (660).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (661).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (662).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (663).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (664).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (665).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (666).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (667).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (668).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (669).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (67).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (670).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (671).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (672).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (673).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (674).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (675).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (676).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (677).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (678).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (679).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (68).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (680).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (681).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (682).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (683).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (684).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (685).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (686).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (687).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (688).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (689).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (69).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (690).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (691).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (692).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (693).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (694).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (695).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (696).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (697).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (698).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (699).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (7).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (70).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (700).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (701).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (702).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (703).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (704).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (705).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (706).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (707).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (708).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (709).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (71).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (710).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (711).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (712).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (713).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (714).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (715).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (716).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (717).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (718).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (719).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (72).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (720).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (721).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (722).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (723).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (724).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (725).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (726).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (727).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (728).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (729).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (73).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (730).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (731).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (732).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (733).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (734).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (735).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (736).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (737).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (738).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (739).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (74).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (740).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (741).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (742).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (743).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (744).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (745).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (746).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (747).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (748).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (749).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (75).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (750).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (751).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (752).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (753).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (754).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (755).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (756).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (757).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (758).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (76).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (77).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (78).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (79).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (8).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (80).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (81).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (82).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (83).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (84).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (85).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (86).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (87).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (88).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (89).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (9).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (90).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (91).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (92).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (93).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (94).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (95).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (96).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (97).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (98).txt,0
+,3
+ ,2
+  ,1
+dataset\new test\Am nhac\AN_VNE_T_ (99).txt,0
+,3
+ ,2
+  ,1
