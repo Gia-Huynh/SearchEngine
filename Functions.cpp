@@ -1,5 +1,7 @@
 ﻿#include "Header.h"
 
+using namespace OurFunkyLibrary;
+
 wchar_t NotLegalW[] = {L'\r', L'\n', '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
 int len = sizeof(NotLegalW) / sizeof(wchar_t);
 //char NotLegal[] = { '\r',  '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
@@ -161,7 +163,7 @@ std::wstring readFile(wstring path)
 wstring fileWstring(wstring file_name)
 {
     _setmode(_fileno(stdout), _O_U16TEXT);
-    locale::global(locale("vi_VN.utf8"));
+    std::locale::global(std::locale("vi_VN.utf8"));
     std::setlocale(LC_ALL, "vi_VN.utf8");
 
     wstring s;
@@ -243,7 +245,7 @@ wstring StopwordRemove(wstring InputString)
     //wcout << " remove: " << result << "\n";
     return result;
 };
-map<wstring, int> FeatureSelection(wstring InputString)
+std::map<wstring, int> FeatureSelection(wstring InputString)
 {
     //wcout << "input string: " << InputString << "\n";
     wstring word;
@@ -328,10 +330,10 @@ map<wstring, int> FeatureSelection(wstring InputString)
 
     return gay;
 };
-int FeatureMapListSave(map<wstring, map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
+int FeatureMapListSave(std::map<wstring, std::map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
 {
     _setmode(_fileno(stdout), _O_U16TEXT);
-    locale::global(locale("vi_VN.utf8"));
+    std::locale::global(std::locale("vi_VN.utf8"));
     std::setlocale(LC_ALL, "vi_VN.utf8");
     std::string result;
     std::wofstream ofs(filename, std::ios::binary);
@@ -355,7 +357,7 @@ int FeatureMapListSave(map<wstring, map<wstring, int>> &FeatureMapList, wstring 
     };
     return 0;
 };
-int FeatureMapListRead(map<wstring, map<wstring, int>>& FeatureMapList, wstring filename)
+int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename)
 {
     wstring gay = readFile(filename);
     if (gay.empty()) return 1;
@@ -363,10 +365,11 @@ int FeatureMapListRead(map<wstring, map<wstring, int>>& FeatureMapList, wstring 
     wstring name;
     int temp2;
     wistringstream gayy (gay);
-    map<wstring, int > FeatureMap;
+    std::map<wstring, int > FeatureMap;
 
     std::getline(gayy, name, L',');
     gayy >> temp2;
+    std::getline(gayy, temp);
     while (gayy)
     {
         std::getline(gayy, temp, L',');
@@ -374,13 +377,17 @@ int FeatureMapListRead(map<wstring, map<wstring, int>>& FeatureMapList, wstring 
         if (temp2 == 0)
         {
             FeatureMapList.insert({name, FeatureMap});
+            FeatureMap.clear();
             name = temp;
-        };
+        } else
         FeatureMap.insert({ temp, temp2 });
+        std::getline(gayy, temp);
     };
+    FeatureMapList.insert({ name, FeatureMap });
+    FeatureMap.clear();
     return 0;
 };
-int Search(map<wstring, map<wstring, int>>& FeatureMapList, wstring KeyWord)
+int Search(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring KeyWord)
 {
     wstring word = L"";
     wstring word_2 = L"";

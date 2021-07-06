@@ -1,3 +1,0 @@
-new test\Am nhac\AN_NLD_T_ (759).txt
-new test\Am nhac\AN_TN_T_ (761).txt
-new test\Am nhac\AN_TN_T_ (762).txt

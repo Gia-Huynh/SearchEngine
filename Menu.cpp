@@ -17,7 +17,7 @@ void printHelp()
 int main()
 {
     _setmode(_fileno(stdin), _O_U16TEXT);
-    locale::global(locale("vi_VN.utf8"));
+    std::locale::global(std::locale("vi_VN.utf8"));
     std::setlocale(LC_ALL, "vi_VN.utf8");
     //_setmode(_fileno(stdout), _O_U16TEXT);
     //_setmode(_fileno(stdout), _O_WTEXT);
@@ -44,7 +44,18 @@ int main()
     };
     wcout << L"Index.txt location: " << IndexPath << endl;
     wcout << L"Folder path: " << FolderPath << endl;
-        
+    
+    
+    wcout << "Testing folder path recursive directory\n";
+    wstring ddata;
+    for (auto& p : std::filesystem::recursive_directory_iterator(WstringToString(FolderPath)))
+    {
+        std::wcout << p.path() << "   " << typeid(p.path()).name() << '\n';
+        ddata = fileWstring(p.path());
+        wcout << ddata << "\n";
+    };
+    return 0;
+
 
     wifstream IndexStream; 
     IndexStream.open(IndexPath);
@@ -67,11 +78,22 @@ int main()
     IndexStream.clear();
     IndexStream.seekg(0);
     
-    map<wstring, int> FeatureMap;
-    map<wstring, map<wstring, int>> FeatureMapList;
+    std::map<wstring, int> FeatureMap;
+    std::map<wstring, std::map<wstring, int>> FeatureMapList;
 
     long long t0 = time(NULL);
     long long t1;
+    wcout << "Reading old metadata.txt....\n";
+    FeatureMapListRead(FeatureMapList, L"metadata.txt");
+    wcout << "Numbers of items: " << FeatureMapList.size() << "\n";
+
+    for (const auto& p : FeatureMapList.begin()->second)
+    {
+        wcout << "\"" << p.first << " " << p.second << "\"" << "\n";
+    };
+    wcout << "exit";
+    return 0;
+
     wcout << "Reading files....\n";
     while ((getline(IndexStream, TxtFile))) {
         fileCurrentNums++;
