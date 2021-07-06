@@ -94,8 +94,6 @@ wstring inpWstring(wstring message)
     return s;
 };
 
-
-
 std::wstring readFile(wstring path)
 //https://vicidi.wordpress.com/2015/03/09/reading-utf-file-with-bom-to-utf-8-encoded-stdstring-in-c11-on-windows/
 {

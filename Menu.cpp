@@ -26,11 +26,9 @@ int main()
     wstring IndexPath = L"Yes";
     wstring FolderPath;
     //return 0;
-    char yes;
     int n = 1;
-    IndexPath = inpWstring(L"index.txt file location: ");
-    //Str = inpString("Input file: ");
-    wcout << L"String inputed: " <<  IndexPath << endl;
+
+    IndexPath = inpWstring(L"Search location: ");
 
     if ((IndexPath.length() >= 9) && (IndexPath.substr(max (1, IndexPath.length() - 8))) == L"ndex.txt")
         FolderPath = IndexPath.substr(0, IndexPath.length() - 9);
@@ -45,17 +43,6 @@ int main()
     wcout << L"Index.txt location: " << IndexPath << endl;
     wcout << L"Folder path: " << FolderPath << endl;
     
-    
-    wcout << "Testing folder path recursive directory\n";
-    wstring ddata;
-    for (auto& p : std::filesystem::recursive_directory_iterator(WstringToString(FolderPath)))
-    {
-        std::wcout << p.path() << "   " << typeid(p.path()).name() << '\n';
-        ddata = fileWstring(p.path());
-        wcout << ddata << "\n";
-    };
-    return 0;
-
 
     wifstream IndexStream; 
     IndexStream.open(IndexPath);
@@ -63,8 +50,22 @@ int main()
     //ifstream == 1 if fail, == 0 if success
     if (!IndexStream)
     {
-        wcout << "index.txt open failure, recheck file name? (index.txt, khong phai Index)\n";
-        exit(EXIT_FAILURE);
+        wcout << "\"index.txt\" open failure, check file name\n";
+        wcout << "auto generating index.txt\n";
+        std::wofstream ofs(IndexPath, std::ios::binary);
+
+        for (auto& p : std::filesystem::recursive_directory_iterator(FolderPath))
+        {
+            //wcout << p.path() << "\n";
+            wstring pathtemp = p.path();
+            pathtemp.erase(0, FolderPath.size());
+            ofs << pathtemp << "\r\n";
+        };
+
+        IndexStream.open(IndexPath);
+
+        //wcout << "return 0";
+        //return 0;
     }
 
     wstring TxtFile;
@@ -85,14 +86,14 @@ int main()
     long long t1;
     wcout << "Reading old metadata.txt....\n";
     FeatureMapListRead(FeatureMapList, L"metadata.txt");
-    wcout << "Numbers of items: " << FeatureMapList.size() << "\n";
+    //wcout << "Numbers of items: " << FeatureMapList.size() << "\n";
 
-    for (const auto& p : FeatureMapList.begin()->second)
-    {
-        wcout << "\"" << p.first << " " << p.second << "\"" << "\n";
-    };
-    wcout << "exit";
-    return 0;
+    //for (const auto& p : FeatureMapList.begin()->second)
+    //{
+    //    wcout << "\"" << p.first << " " << p.second << "\"" << "\n";
+    //};
+    //wcout << "exit";
+    //return 0;
 
     wcout << "Reading files....\n";
     while ((getline(IndexStream, TxtFile))) {
@@ -101,13 +102,16 @@ int main()
         if (fileCurrentNums % 50 == 0) wcout << TxtFile << " " << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1-t0) * (fileNums - fileCurrentNums)))  / fileCurrentNums << "s\n";
         //data = fileWstring(WstringToString( FolderPath + TxtFile)); 
         data = fileWstring((FolderPath + TxtFile));
-        //wcout << "____________________\n";
-        //wcout << data << "\n";
+        wcout << "____________________\n";
+        wcout << data << "\n";
         data = StopwordRemove(data);
         //wcout << data << "\n";
         FeatureMap = FeatureSelection(data);
         FeatureMapList[FolderPath + TxtFile] = FeatureMap;
         //wcout << "test2: " << FeatureMap.begin()->first << "\n";
+
+        wcout << "return 0";
+        return 0;
     }
     FeatureMapListSave(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
     IndexStream.close();
