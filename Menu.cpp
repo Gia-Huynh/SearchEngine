@@ -4,15 +4,15 @@
 #include <windows.h>
 void printHelp()
 {
-    wprintf(L"_______________________________________\n");
-    wprintf(L"|                                     |\n");
-    wprintf(L"| 0 Thoat chuong trinh                |\n");
-    wprintf(L"| 1                 |\n");
-    wprintf(L"| 2                     |\n");
-    wprintf(L"| 3                     |\n");
-    wprintf(L"| 4               |\n");
-    wprintf(L"| 10 Hien thi lai menu              |\n");
-    wprintf(L"|_____________________________________|\n");
+    wprintf(L"____________________________________________________________________\n");
+    wprintf(L"|                                                                  |\n");
+    wprintf(L"| 0 Thoat chuong trinh                                             |\n");
+    wprintf(L"| 1 Chon thu muc                                                   |\n");
+    wprintf(L"| 2 Chon che do doc (cap nhat (them xoa file) / doc lai tat ca)    |\n");
+    wprintf(L"| 3 Cap nhat co so du dieu                                         |\n");
+    wprintf(L"| 4 Tim kiem                                                       |\n");
+    wprintf(L"| 5 Hien thi lai menu                                              |\n");
+    wprintf(L"|__________________________________________________________________|\n");
 };
 
 int findTxt(wstring& IndexPath, wstring& FolderPath)
@@ -63,6 +63,35 @@ int countIndex(wifstream& IndexStream, wstring& TxtFile, long long& fileNums)
     IndexStream.seekg(0);
     return 0;
 };
+std::map<wstring, int> FeatureMap;
+std::map<wstring, std::map<wstring, int>> FeatureMapList;   
+int ReadMetadata ()
+{
+    wcout << "Reading old metadata.txt....\n";
+    FeatureMapListRead(FeatureMapList, L"metadata.txt");
+    ReadStopWords("vietnamese-stopwords.txt"); 
+    return 0;
+};
+long long t0;
+int ReadFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, long long fileNums)
+{
+    long long t1;
+    long long fileCurrentNums = 0;
+    wstring data;
+    while ((getline(IndexStream, TxtFile))) {
+        fileCurrentNums++;
+        t1 = time(NULL);
+        if (fileCurrentNums % 50 == 0) wcout << TxtFile << " " << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1 - t0) * (fileNums - fileCurrentNums))) / fileCurrentNums << "s\n";
+        if (FeatureMapList.find(FolderPath + TxtFile) == FeatureMapList.end())
+        {
+            data = fileWstring((FolderPath + TxtFile));
+            data = StopwordRemove(data);
+            FeatureMap = FeatureSelection(data);
+            FeatureMapList[FolderPath + TxtFile] = FeatureMap;
+        };
+    }
+    return 0;
+}
 int main()
 {
     _setmode(_fileno(stdin), _O_U16TEXT);
@@ -71,14 +100,13 @@ int main()
     //_setmode(_fileno(stdout), _O_U16TEXT);
     //_setmode(_fileno(stdout), _O_WTEXT);
 
-    ReadStopWords("vietnamese-stopwords.txt");
     wstring IndexPath = L"Yes";
     wstring FolderPath;
     int n = 1;
 
-    IndexPath = inpWstring(L"Search location: ");
+    IndexPath = inpWstring(L"Nhap duong dan tuong doi (relative path): ");
 
-    long long t0 = time(NULL);
+    t0 = time(NULL);
     long long t1;
 
     findTxt(IndexPath, FolderPath);
@@ -90,49 +118,27 @@ int main()
     checkIndex(IndexStream, IndexPath, FolderPath);
 
     wstring TxtFile;
-    wstring data;
-    long long fileCurrentNums = 0;
     long long fileNums = 0;
     countIndex(IndexStream, TxtFile, fileNums);
     
-    std::map<wstring, int> FeatureMap;
-    std::map<wstring, std::map<wstring, int>> FeatureMapList;
-    wcout << "Reading old metadata.txt....\n";
-    FeatureMapListRead(FeatureMapList, L"metadata.txt");
 
+    ReadMetadata();
 
     wcout << "Reading files....\n";
-    while ((getline(IndexStream, TxtFile))) {
-        fileCurrentNums++;
-        t1 = time(NULL);
-        if (fileCurrentNums % 50 == 0) wcout << TxtFile << " " << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1-t0) * (fileNums - fileCurrentNums)))  / fileCurrentNums << "s\n";
-        if (FeatureMapList.find(FolderPath + TxtFile) == FeatureMapList.end())
-        {
-            data = fileWstring((FolderPath + TxtFile));
-            data = StopwordRemove(data);
-            FeatureMap = FeatureSelection(data);
-            FeatureMapList[FolderPath + TxtFile] = FeatureMap;
-        };
-    }
+    ReadFile(IndexStream, TxtFile, FolderPath, fileNums);
+
     wcout << "Saving metadata.txt...\n";
     FeatureMapListSave(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
+    
+    
+    
     IndexStream.close();
     t1 = time(NULL);
     wcout << "Total time elapsed: " << t1 - t0 <<"\n";
-    return 0;
-    //if (TxtFile)
-    //    free(TxtFile);
-    //wstring FileStr = fileWstring(Str);
     
+    return 0;    
     
-    
-    ///Below this line is full of shit
-    /// 
-    //string nameInp;
-    //nameInp = inpString("Input file not WIDE: ");
-    //cout << "File inputed: " << nameInp << endl;
-    //string FileStr = " ";
-    //FileStr = fileString(nameInp.data());
+    //Below this line is full of shit
 
 
        /*

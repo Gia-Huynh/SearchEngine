@@ -101,7 +101,14 @@ std::wstring readFile(wstring path)
     std::ifstream ifs(path.c_str(), std::ios::binary);
     std::stringstream ss;
     int encoding = ENCODING_ASCII;
-
+    //if (mode == 1)
+    //{
+    //    if (!ifs.is_open()) {
+    //        result.clear();
+    //        return L"";
+    //    }
+    //    return L"gay";
+    //};
     if (!ifs.is_open()) {
         // Unable to read file
         result.clear();

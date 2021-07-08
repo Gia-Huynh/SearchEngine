@@ -1,8 +1,3 @@
-Generate path.py
-index.txt
-indexBigg.txt
-indexSmoll.txt
-indexxxx.txt
 new test
 new test\Am nhac
 new test\Am nhac\AN_NLD_T_ (759).txt
