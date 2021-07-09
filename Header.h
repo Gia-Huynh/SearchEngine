@@ -44,6 +44,7 @@ namespace OurFunkyLibrary
     using wistringstream = std::wistringstream;
     using wostream = std::wostream;
     using std::wcout;
+    using std::wcin;
     using std::endl;
 }
 using namespace OurFunkyLibrary;
