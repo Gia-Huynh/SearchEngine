@@ -17,18 +17,49 @@
 #include <codecvt>
 #include <algorithm>
 #include <map>
-#include <clocale>
+#include <unordered_map>
 #include <unordered_set>
+#include <clocale>
+#include <time.h>
+#include <vector>
+#include <filesystem>
+//namespace fs = std::filesystem;
 
 
-using namespace std; 
+#define ENCODING_ASCII      0
+#define ENCODING_UTF8       1
+#define ENCODING_UTF16LE    2
+#define ENCODING_UTF16BE    3
+
 //std::unordered_set<std::wstring> stopwords;
 void ReadStopWords(const char filename[]);
-wstring inpWstring(const wchar_t message[]);
-string WstringToString(wstring wStr);
-std::wstring readFile(string path);
-wstring fileWstring(wstring file_name);
+//using namespace std;
+//namespace wstring = std::string;
 
+namespace OurFunkyLibrary
+{
+    using string = std::string; 
+    using wstring = std::wstring;
+    using wifstream = std::wifstream;
+    using wistringstream = std::wistringstream;
+    using wostream = std::wostream;
+    using std::wcout;
+    using std::wcin;
+    using std::endl;
+}
+using namespace OurFunkyLibrary;
+
+wstring inpWstring(wstring message);
+string inpString(string message);
+string WstringToString(wstring wStr);
+wstring StringToWstring(string Str);
+std::wstring readFile(wstring path);
+wstring fileWstring(wstring file_name);
+std::map<wstring, int> FeatureSelection(wstring InputString);
+wstring StopwordRemove(wstring InputString);
+int FeatureMapListSave(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename, int encoding);
+int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename);
+wstring dondep(wstring s);
 //void Bai1();
 void Bai2();
 void Bai3();

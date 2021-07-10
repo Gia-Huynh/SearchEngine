@@ -1,0 +1,68 @@
+dataset\new test\Am nhac\AN_NLD_T_ (759).txt,0
+biểu,4
+biểu diễn,4
+ca,3
+cảm,4
+diễn,4
+hát,6
+khấu,3
+kế,3
+mắt,3
+mặc,5
+phương,20
+phục,9
+quần,3
+sân,3
+sân khấu,3
+thiết,3
+thiết kế,3
+thể,4
+trang,9
+trang phục,9
+túi,10
+túi ví,3
+ví,5
+áo,4
+dataset\new test\Am nhac\AN_TN_T_ (761).txt,0
+2005,3
+ca,3
+chương,3
+chương trình,3
+nhạc,4
+tiếng,5
+tiếng vn,4
+trình,4
+vn,4
+đài,3
+đài tiếng,3
+đài tiếng vn,3
+đồng,3
+dataset\new test\Am nhac\AN_TN_T_ (762).txt,0
+ca,8
+ca sĩ,6
+chiều,3
+chương,6
+chương trình,6
+diễn,8
+liên,3
+nghĩa,3
+nhạc,5
+nông,3
+phố,3
+sân,3
+sĩ,7
+thành,7
+thành viên,4
+trình,7
+tượng,4
+viên,6
+vũ,3
+vội,3
+đoàn,9
+đêm,3
+đắk,4
+đắk nông,3
+động,4
+đứng,6
+ấn,5
+ấn tượng,4
