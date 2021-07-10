@@ -16,7 +16,7 @@ void printHelp()
     wprintf(L"| 2 Chọn chế độ đọc [cập nhật / -->> đọc lại tất cả <<--]          |\n");
     wprintf(L"| 3 Cập nhật cơ sở dữ liệu                                         |\n");
     wprintf(L"| 4 Lưu cơ sở dữ liệu                                              |\n");
-    wprintf(L"| 5 Chọn số lượng kết quả trả về ( Hiện tại: %2d )                 |\n", MaxNumSearch);
+    wprintf(L"| 5 Chọn tối đa số lượng kết quả trả về ( Hiện tại:%2d )            |\n", MaxNumSearch);
     wprintf(L"| 6 Tìm kiếm                                                       |\n");
     wprintf(L"| 7 Hiển thị lại menu                                              |\n");
     wprintf(L"|__________________________________________________________________|\n");
@@ -123,77 +123,82 @@ int Search ()
         wcout << L"Chưa đọc file!\n";
         return 2;
     };
-
-    TuKhoa = inpWstring(L"Nhập từ khóa cần tìm kiếm (nhập \"exit\" để thoát chế độ tìm kiếm): ");
-    TuKhoa = dondep(TuKhoa);
-
-    if (TuKhoa == L"exit") return 0;
-    word;
-    word_2 = L" ";
-    word_3 = L" ";
-    word_4 = L" ";
-    wistringstream iss(TuKhoa, wistringstream::in);
-    std::map<wstring, int> gay;
-
-    while (iss >> word)
+    while (true)
     {
-        gay[word]++;
-        //std::wcout << "[word]" << word << "Gay [word]: " << gay[word] << "\n";
-        if (word_2 != L" ") gay[word_2 + L' ' + word]++;
-        if (word_3 != L" ") gay[word_3 + L' ' + word_2 + L' ' + word]++;
-        if (word_4 != L" ")  gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
-        word_4 = word_3;
-        word_3 = word_2;
-        word_2 = word;
-    };
-    long a;
-    //long max = 0;
-    //wstring best;
-    long* ranking = new long[MaxNumSearch]();
-    wstring * best = new wstring[MaxNumSearch];
-    for (auto p = FeatureMapList.begin(); p != FeatureMapList.end(); p++)
-    {
-        a = 0;
-        for (auto pp = gay.begin(); pp != gay.end(); pp++)
+        TuKhoa = inpWstring(L"Nhập từ khóa cần tìm kiếm (nhập \"exit\" để thoát chế độ tìm kiếm): ");
+        TuKhoa = dondep(TuKhoa);
+
+        wcout << L"___________________________________________\n";
+        if (TuKhoa == L"exit") return 0;
+        word;
+        word_2 = L" ";
+        word_3 = L" ";
+        word_4 = L" ";
+        wistringstream iss(TuKhoa, wistringstream::in);
+        std::map<wstring, int> gay;
+
+        while (iss >> word)
         {
-            if (p->second.find(pp->first) != p->second.end())
-            {
-                a = a + p->second[pp->first];
-            };
+            gay[word]++;
+            //std::wcout << "[word]" << word << "Gay [word]: " << gay[word] << "\n";
+            if (word_2 != L" ") gay[word_2 + L' ' + word]++;
+            if (word_3 != L" ") gay[word_3 + L' ' + word_2 + L' ' + word]++;
+            if (word_4 != L" ")  gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
+            word_4 = word_3;
+            word_3 = word_2;
+            word_2 = word;
         };
-        for (int i = 0; i < MaxNumSearch; i++)
+        long a;
+        //long max = 0;
+        //wstring best;
+        long* ranking = new long[MaxNumSearch]();
+        wstring* best = new wstring[MaxNumSearch];
+        for (auto p = FeatureMapList.begin(); p != FeatureMapList.end(); p++)
         {
-            if (a > ranking[i])
+            a = 0;
+            for (auto pp = gay.begin(); pp != gay.end(); pp++)
             {
-
-                for (int j = i+1; j < MaxNumSearch; j++)
+                size_t NumSpace = std::count((pp->first).begin(), (pp->first).end(), ' ');
+                if (p->second.find(pp->first) != p->second.end())
                 {
-                    ranking[j] = ranking[j - 1];
-                    best[j] = best[j - 1];
-                }
-                ranking[i] = a;
-                best[i] = p->first;
-                break;
+                    a = a + (p->second[pp->first]) * NumSpace;
+                };
+            };
+            for (int i = 0; i < MaxNumSearch; i++)
+            {
+                if (a > ranking[i])
+                {
+
+                    for (int j = i + 1; j < MaxNumSearch; j++)
+                    {
+                        ranking[j] = ranking[j - 1];
+                        best[j] = best[j - 1];
+                    }
+                    ranking[i] = a;
+                    best[i] = p->first;
+                    break;
+                };
             };
         };
-    };
-    if ((best[0].substr(max(1, best[0].length() - 8))) == L"ndex.txt")
-    {
-        wcout << L"Đã hết tài liệu phù hợp.\n";
-    }
-    else
-    {
-        wcout << L"Kết quả tìm kiếm:\n\n";
-        for (int i = 0; i < MaxNumSearch; i++)
+        if ((best[0].substr(max(1, best[0].length() - 8))) == L"ndex.txt")
         {
-            wcout << "[" << i+1 << "]: " << best [i] << "\n";
-            word = readFile(best[i]);
-            wcout << L"Tóm tắt: " << word.substr(0, min(word.length(), 200)) << "...\n\n";
-            if ((i != MaxNumSearch - 1) && (best[i] == best[i + 1]))
+            wcout << L"Đã hết tài liệu phù hợp.\n\n";
+        }
+        else
+        {
+            wcout << L"\nKết quả tìm kiếm:\n\n";
+            for (int i = 0; i < MaxNumSearch; i++)
             {
-                wcout << L"Không còn kết quả phù hợp\n";
-                break;
+                wcout << "[" << i + 1 << "]: " << best[i] << "\n";
+                word = readFile(best[i]);
+                wcout << L"Tóm tắt: " << word.substr(0, min(word.length(), 200)) << "...\n\n";
+                if ((i != MaxNumSearch - 1) && (best[i] == best[i + 1]))
+                {
+                    wcout << L"Không còn kết quả phù hợp\n\n";
+                    break;
+                };
             };
+            wcout << L"___________________________________________\n";
         };
     };
     return 0;
@@ -330,6 +335,7 @@ int main()
         case 6:
             getline(std::wcin, temp);
             Search();
+            printHelp();
             break;
         case 7:
             printHelp();
