@@ -250,6 +250,14 @@ wstring StopwordRemove(wstring InputString)
     //wcout << " remove: " << result << "\n";
     return result;
 };
+wstring dondep(wstring s)
+{
+    s = cleanWstring(s);
+    wchar_t r;
+    std::replace_if(s.begin(), s.end(), [&](wchar_t c) { return (rs.find(c) != rs.end())
+        && (r = rs[c]); }, r);
+    return s;
+};
 std::map<wstring, int> FeatureSelection(wstring InputString)
 {
     //wcout << "input string: " << InputString << "\n";

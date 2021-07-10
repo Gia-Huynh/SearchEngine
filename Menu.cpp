@@ -3,20 +3,22 @@
 #include "Header.h"
 #include <windows.h>
 int ReadMode = 0;
+int MaxNumSearch = 3;
 void printHelp()
 {
     wprintf(L"____________________________________________________________________\n");
     wprintf(L"|                                                                  |\n");
-    wprintf(L"| 0 Thoat chuong trinh                                             |\n");
-    wprintf(L"| 1 Chon thu muc                                                   |\n");
+    wprintf(L"| 0 Thoát chương trình                                             |\n");
+    wprintf(L"| 1 Chọn thư mục                                                   |\n");
     if (ReadMode == 0)  
-    wprintf(L"| 2 Chon che do doc [-->> cap nhat <<-- / doc lai tat ca]          |\n");
+    wprintf(L"| 2 Chọn chế độ đọc [-->> cập nhật <<-- / đọc lại tất cả]          |\n");
     else 
-    wprintf(L"| 2 Chon che do doc [cap nhat / -->> doc lai tat ca <<--]          |\n");
-    wprintf(L"| 3 Cap nhat co so du dieu                                         |\n");
-    wprintf(L"| 4 Luu co so du dieu                                              |\n");
-    wprintf(L"| 5 Tim kiem                                                       |\n");
-    wprintf(L"| 6 Hien thi lai menu                                              |\n");
+    wprintf(L"| 2 Chọn chế độ đọc [cập nhật / -->> đọc lại tất cả <<--]          |\n");
+    wprintf(L"| 3 Cập nhật cơ sở dữ liệu                                         |\n");
+    wprintf(L"| 4 Lưu cơ sở dữ liệu                                              |\n");
+    wprintf(L"| 5 Chọn số lượng kết quả trả về ( Hiện tại: %2d )                 |\n", MaxNumSearch);
+    wprintf(L"| 6 Tìm kiếm                                                       |\n");
+    wprintf(L"| 7 Hiển thị lại menu                                              |\n");
     wprintf(L"|__________________________________________________________________|\n");
 };
 
@@ -39,15 +41,15 @@ int checkIndex(wifstream &IndexStream, wstring IndexPath, wstring FolderPath)
 {
     if (FolderPath == L"")
     {
-        wcout << "Chua nhap duong dan toi thu muc! \n";
+        wcout << "Chưa nhập đường dẫn tới thư mục! \n";
         return 2;
     };
     IndexStream.open(IndexPath);
     //ifstream == 1 if fail, == 0 if success
     if (!IndexStream)
     {
-        wcout << "\"index.txt\" open failure, check file name\n";
-        wcout << "auto generating index.txt\n";
+        wcout << L"\"index.txt\" mở thất bại, kiểm tra tên file?\n";
+        wcout << L"Tự động tạo file index.txt\n";
         std::wofstream ofs(IndexPath, std::ios::binary);
 
         for (auto& p : std::filesystem::recursive_directory_iterator(FolderPath))
@@ -89,7 +91,7 @@ int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, lon
     long long t1;
     long long fileCurrentNums = 0;
     wstring data;
-    wcout << "Read mode: " << ReadMode << "\n";
+    wcout << "Chế độ đọc hiện tại: " << ReadMode << "\n";
     while ((getline(IndexStream, TxtFile))) {
         fileCurrentNums++;
         t1 = time(NULL);
@@ -105,23 +107,31 @@ int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, lon
         {
         };
     };
-    wprintf(L"Da cap nhat %ld files\n", fileNums);
+    wprintf(L"Đã cập nhật %lld files\n", fileNums);
     return 0;
 }
-int length = 1;
 int Search ()
 {
+    wstring TuKhoa;
+    wstring word;
+    wstring word_2 = L" ";
+    wstring word_3 = L" ";
+    wstring word_4 = L" ";
+    //wistringstream iss;
     if (FeatureMapList.empty() == true)
     {
-        wcout << "Chua doc file!\n";
+        wcout << L"Chưa đọc file!\n";
         return 2;
     };
-    wstring TuKhoa = inpWstring(L"Nhập từ khóa cần tìm kiếm: ");
 
-    wstring word;
-    wstring word_2;
-    wstring word_3;
-    wstring word_4;
+    TuKhoa = inpWstring(L"Nhập từ khóa cần tìm kiếm (nhập \"exit\" để thoát chế độ tìm kiếm): ");
+    TuKhoa = dondep(TuKhoa);
+
+    if (TuKhoa == L"exit") return 0;
+    word;
+    word_2 = L" ";
+    word_3 = L" ";
+    word_4 = L" ";
     wistringstream iss(TuKhoa, wistringstream::in);
     std::map<wstring, int> gay;
 
@@ -129,16 +139,18 @@ int Search ()
     {
         gay[word]++;
         //std::wcout << "[word]" << word << "Gay [word]: " << gay[word] << "\n";
-        gay[word_2 + L' ' + word]++;
-        gay[word_3 + L' ' + word_2 + L' ' + word]++;
-        gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
+        if (word_2 != L" ") gay[word_2 + L' ' + word]++;
+        if (word_3 != L" ") gay[word_3 + L' ' + word_2 + L' ' + word]++;
+        if (word_4 != L" ")  gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
         word_4 = word_3;
         word_3 = word_2;
         word_2 = word;
     };
     long a;
-    long max = 0;
-    wstring best;
+    //long max = 0;
+    //wstring best;
+    long* ranking = new long[MaxNumSearch]();
+    wstring * best = new wstring[MaxNumSearch];
     for (auto p = FeatureMapList.begin(); p != FeatureMapList.end(); p++)
     {
         a = 0;
@@ -149,42 +161,77 @@ int Search ()
                 a = a + p->second[pp->first];
             };
         };
-        if (a > max)
+        for (int i = 0; i < MaxNumSearch; i++)
         {
-            max = a;
-            best = p->first;
+            if (a > ranking[i])
+            {
+
+                for (int j = i+1; j < MaxNumSearch; j++)
+                {
+                    ranking[j] = ranking[j - 1];
+                    best[j] = best[j - 1];
+                }
+                ranking[i] = a;
+                best[i] = p->first;
+                break;
+            };
         };
     };
-    if ((best.substr(max(1, best.length() - 8))) == L"ndex.txt")
+    if ((best[0].substr(max(1, best[0].length() - 8))) == L"ndex.txt")
     {
-        wcout << "Khong co tai lieu phu hop.\n";
+        wcout << L"Đã hết tài liệu phù hợp.\n";
     }
     else
     {
-        wcout << "Kết quả: " << best << "\n";
-        word = readFile(best);
-        wcout << "Tóm tắt: " << word.substr(0, max (word.length(), 100)) << "...\n";
+        wcout << L"Kết quả tìm kiếm:\n\n";
+        for (int i = 0; i < MaxNumSearch; i++)
+        {
+            wcout << "[" << i+1 << "]: " << best [i] << "\n";
+            word = readFile(best[i]);
+            wcout << L"Tóm tắt: " << word.substr(0, min(word.length(), 200)) << "...\n\n";
+            if ((i != MaxNumSearch - 1) && (best[i] == best[i + 1]))
+            {
+                wcout << L"Không còn kết quả phù hợp\n";
+                break;
+            };
+        };
     };
+    return 0;
 };
 
 int SetReadMode()
 {
     wprintf(L"____________________________________\n");
-    wprintf(L"| 0: Cap nhat cac thay doi (nhanh) |\n");
-    wprintf(L"| 1: Cap nhat tat ca file (cham)   |\n");
+    wprintf(L"| 0: Cập nhật các thay đổi (nhanh) |\n");
+    wprintf(L"| 1: Cập nhật tất cả file (chậm)   |\n");
     wprintf(L"|__________________________________|\n");
     int a = 2;
     while ((a!=0) && (a!=1))
     {
-        wcout << "Nhap lua chon: ";
+        wcout << L"Nhập lựa chọn: ";
         wscanf_s(L" %d", &a);
-        if ((a != 0) && (a != 1)) wcout << "Khong hop le, nhap lai\n";
+        if ((a != 0) && (a != 1)) wcout << L"Không hợp lệ, nhập lại\n";
     };
     if (a == 0)
     {
-        wprintf(L" Ban da chon [0: Cap nhat cac thay doi]\n");
-    } else wprintf(L" Ban da chon [1: Cap nhat tat ca file]\n");;
+        wprintf(L" Bạn đã chọn [0: Cập nhật các thay đổi]\n");
+    } else wprintf(L" Bạn đã chọn [1: Cập nhật tất cả file]\n");;
     return a;
+};
+
+
+int SetMaxNumSearch()
+{
+    wprintf(L"____________________________________\n");
+    MaxNumSearch = 0;
+    while (MaxNumSearch < 1)
+    {
+        wprintf(L"Nhập số lượng kết quả trả về mỗi lần tìm kiếm: ");
+        wscanf_s(L" %d", &MaxNumSearch);
+        if (MaxNumSearch < 1) wcout << "Không hợp lệ, nhập lại\n";
+        if (MaxNumSearch > 10) wcout << L"Trả về quá nhiều sẽ khiến quá trình tìm kiếm lâu, xin cân nhắc.\n";
+    };
+    return 0;
 };
 
 int main()
@@ -192,7 +239,7 @@ int main()
     _setmode(_fileno(stdin), _O_U16TEXT);
     std::locale::global(std::locale("vi_VN.utf8"));
     std::setlocale(LC_ALL, "vi_VN.utf8");
-    //_setmode(_fileno(stdout), _O_U16TEXT);
+    _setmode(_fileno(stdout), _O_U16TEXT);
 
     wstring temp;
     wstring IndexPath = L"Yes";
@@ -242,7 +289,7 @@ int main()
     printHelp();
     while (true)
     {
-        wprintf(L"\nNhap so (0-6): ");
+        wprintf(L"\nNhap so (0-7): ");
         wscanf_s(L" %d", &n);
         switch (n)
         {
@@ -252,7 +299,7 @@ int main()
             break;
         case 1:
             getline(std::wcin, temp);
-            IndexPath = inpWstring(L"Nhap duong dan tuong doi (relative path) toi thu muc: ");
+            IndexPath = inpWstring(L"Nhập đường dẫn tương đối (relative path) tới thư mục: ");
             std::transform(IndexPath.begin(), IndexPath.end(), IndexPath.begin(), ::tolower);
             findTxt(IndexPath, FolderPath);
             break;
@@ -262,30 +309,33 @@ int main()
         case 3:
             if (checkIndex(IndexStream, IndexPath, FolderPath) == 2) break;
             fileNums = 0;
-            wcout << "Doc du lieu file index.txt....\n";
+            wcout << L"Đọc dữ liệu file index.txt....\n";
             countIndex(IndexStream, TxtFile, fileNums);
-            wcout << "Done.\n";
-            wcout << "Doc du lieu file metadata.txt....\n";
+            wcout << L"Done.\n";
+            wcout << L"Đọc dữ liệu file metadata.txt....\n";
             ReadMetadata();
-            wcout << "Done.\n";
-            wcout << "Doc du lieu cac file van bang....\n";
+            wcout << L"Done.\n";
+            wcout << L"Đọc dữ liệu cac file van bang....\n";
             ReadAllFile(IndexStream, TxtFile, FolderPath, fileNums);
             printHelp();
             break;
         case 4:
-            wcout << "Dang luu file metadata.txt...\n";
+            wcout << L"Đang lưu file metadata.txt...\n";
             FeatureMapListSave(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
-            wcout << "Done.\n";
+            wcout << L"Done.\n";
             break;
         case 5:
+            SetMaxNumSearch();
+            break;
+        case 6:
             getline(std::wcin, temp);
             Search();
             break;
-        case 6:
+        case 7:
             printHelp();
             break;
         default:
-            wprintf(L"Khong hop le\n");
+            wprintf(L"Không hợp lệ\n");
         };
     };
     return 0;

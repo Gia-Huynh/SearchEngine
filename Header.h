@@ -59,6 +59,7 @@ std::map<wstring, int> FeatureSelection(wstring InputString);
 wstring StopwordRemove(wstring InputString);
 int FeatureMapListSave(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename, int encoding);
 int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename);
+wstring dondep(wstring s);
 //void Bai1();
 void Bai2();
 void Bai3();
