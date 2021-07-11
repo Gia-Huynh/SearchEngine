@@ -58,7 +58,6 @@ int checkIndex(wifstream &IndexStream, wstring IndexPath, wstring FolderPath)
             pathtemp.erase(0, FolderPath.size());
             ofs << pathtemp << "\r\n";
         };
-
         IndexStream.open(IndexPath);
 
     }
@@ -86,28 +85,56 @@ int ReadMetadata ()
 long long t0;
 int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, long long fileNums)
 {
+    long long ttt1;
+    long long ttt2;
+    long long timeFile = 0;
+    long long timeStopWord = 0;
+    long long timeFeature = 0;
+    long long timeAdd = 0;
+
+
+
     long long tt1;
     tt1 = time(NULL);
     long long t1;
     long long fileCurrentNums = 0;
     wstring data;
-    wcout << "Chế độ đọc hiện tại: " << ReadMode << "\n";
+    wcout << L"Chế độ đọc hiện tại: " << ReadMode << "\n";
     while ((getline(IndexStream, TxtFile))) {
         fileCurrentNums++;
         t1 = time(NULL);
-        if (fileCurrentNums % 100 == 0) wcout << TxtFile << " " << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1 - tt1) * (fileNums - fileCurrentNums))) / fileCurrentNums << "s\n";
+        if (fileCurrentNums % 100 == 0) wcout << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1 - tt1) * (fileNums - fileCurrentNums))) / fileCurrentNums << "s\n";
+        if (fileCurrentNums % 100 == 0) wcout << timeFile  << " " << timeStopWord << " " << timeFeature << " " << timeAdd << "\n";
         if ((FeatureMapList.find(FolderPath + TxtFile) == FeatureMapList.end()) || (ReadMode == 1))
         {
+            ttt1 = time(NULL);
             data = fileWstring((FolderPath + TxtFile));
+            //wcout << L"____________________________________________________________________\n";
+            //wcout << data << "\n\n\n";
+            timeFile += (time(NULL) - ttt1);
+            ttt1 = time(NULL);
+
             data = StopwordRemove(data);
+            //wcout << data << "\n";
+
+            timeStopWord += (time(NULL) - ttt1);
+            ttt1 = time(NULL);
+
             FeatureMap = FeatureSelection(data);
+
+            timeFeature += (time(NULL) - ttt1);
+            ttt1 = time(NULL);
+
             FeatureMapList[FolderPath + TxtFile] = FeatureMap;
+
+            timeAdd += (time(NULL) - ttt1);
         }
         else
         {
         };
     };
     wprintf(L"Đã cập nhật %lld files\n", fileNums);
+    wprintf(L"Tổng thời gian: %lld", time(NULL) - tt1);
     return 0;
 }
 int Search ()
@@ -153,6 +180,7 @@ int Search ()
         //wstring best;
         long* ranking = new long[MaxNumSearch]();
         wstring* best = new wstring[MaxNumSearch];
+        best[0] = L"index.txt";
         for (auto p = FeatureMapList.begin(); p != FeatureMapList.end(); p++)
         {
             a = 0;

@@ -55,7 +55,7 @@ bool IllegalChar(wchar_t c)
     else
         return true;
 }
-wstring cleanWstring(wstring a)
+wstring cleanWstring(wstring& a)
 {
     int i = 0;
     int len = a.length();
@@ -175,7 +175,8 @@ wstring fileWstring(wstring file_name)
     s = readFile(file_name); //49s
 
     //wcout << L"S OG:\n" << s << "\n\n";
-    s = cleanWstring(s); // 202-49 = 153s
+    //s = cleanWstring(s); // 202-49 = 153s
+    cleanWstring(s);
 
     //wcout << L"S cleanWstring:\n" << s << "\n\n";
     wchar_t r; //replacement
@@ -247,9 +248,32 @@ wstring StopwordRemove(wstring InputString)
         word_2 = word;
         pos = pos+1;
     };
-    //wcout << " remove: " << result << "\n";
     return result;
 };
+
+
+wstring StopwordRemove_new(wstring InputString)
+{
+    //wcout << "__________________________________________________________________\n OG: " << InputString << "\n";
+    wstring result = InputString;
+    wistringstream iss(InputString, wistringstream::in);
+    int pos;
+    wstring nigger;
+    for (auto p = stopwords.begin(); p != stopwords.end(); p++)
+    {
+        nigger = L' ' + *p + L' ';
+        pos = result.find(nigger);
+        while (pos < result.length())
+        {
+            //wcout << *p << " " << pos << " " << (*p).length() << "\n";
+            result.erase(pos, (nigger).length() - 1);
+            pos = result.find(nigger);
+        };
+    };
+    //wcout << "New Stopword: " << result << "\n" << "Old Stopword: "<< StopwordRemove_OG(InputString) << "\n\n";
+    return result;
+};
+
 wstring dondep(wstring s)
 {
     s = cleanWstring(s);
@@ -262,13 +286,13 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
 {
     //wcout << "input string: " << InputString << "\n";
     wstring word;
-    wstring word_2;
-    wstring word_3;
-    wstring word_4;
+    wstring word_2 = L"";
+    wstring word_3 = L"";
+    wstring word_4 = L"";
     wistringstream iss(InputString, wistringstream::in);
     std::map<wstring, int> gay;
     //std::map<wstring, int> gay2;
-
+    /*
     //do {
         iss >> word;
     //} while (stopwords.find(word) != stopwords.end());
@@ -296,15 +320,27 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
     word_4 = word_3;
     word_3 = word_2;
     word_2 = word;
-
+    */
+    int*pairPointer;
     while (iss >> word)
     {
         //if (stopwords.find(word) != stopwords.end()) continue;
         gay[word]++;
         //std::wcout << "[word]" << word << "Gay [word]: " << gay[word] << "\n";
-        gay[word_2 + L' ' + word]++;
-        gay[word_3 + L' ' + word_2 + L' ' + word]++;
-        gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
+        pairPointer = &gay[word_2 + L' ' + word];
+        (*pairPointer)++;
+        //gay[word_2 + L' ' + word]++;
+        if (*pairPointer > 1)
+        {
+            pairPointer = &gay[word_3 + L' ' + word_2 + L' ' + word];
+            (*pairPointer)++;
+            if (*pairPointer > 1)
+            {
+                gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
+            };
+        };
+        //gay[word_3 + L' ' + word_2 + L' ' + word]++;
+        //gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
         word_4 = word_3;
         word_3 = word_2;
         word_2 = word;
@@ -329,6 +365,7 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
             //count = count + 1;
     //};
     //wcout << count << " YES \n";
+    /* //OG, working.
     bool checkBreak = false;
     for (std::map<wstring, int>::iterator it = gay.begin(); it != gay.end(); ++it) {
         while (it->second < 3)
@@ -340,8 +377,19 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
         };
         if (checkBreak) break;
     }
-
     return gay;
+    */
+
+    std::map<wstring, int> gay2;
+    bool checkBreak = false;
+    for (std::map<wstring, int>::iterator it = gay.begin(); it != gay.end(); ++it) {
+        if (it->second > 2)
+        {
+            gay2.insert(*it);
+        };
+    }
+    return gay2;
+
 };
 int FeatureMapListSave(std::map<wstring, std::map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
 {
