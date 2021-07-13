@@ -1,8 +1,5 @@
-Generate path.py
 index.txt
-indexBigg.txt
 indexSmoll.txt
-indexxxx.txt
 new test
 new test\Am nhac
 new test\Am nhac\AN_NLD_T_ (759).txt
@@ -21197,6 +21194,7 @@ new train\Hinh su\HS_VNE_ (96).txt
 new train\Hinh su\HS_VNE_ (97).txt
 new train\Hinh su\HS_VNE_ (98).txt
 new train\Hinh su\HS_VNE_ (99).txt
+new train\index.txt
 new train\Khong gian song
 new train\Khong gian song\KGS_NLD_ (122).txt
 new train\Khong gian song\KGS_NLD_ (123).txt

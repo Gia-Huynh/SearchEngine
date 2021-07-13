@@ -6,8 +6,10 @@ wchar_t NotLegalW[] = {L'\r', L'\n', '~','`','!','@','#','$','%','^','&','*','('
 int len = sizeof(NotLegalW) / sizeof(wchar_t);
 //char NotLegal[] = { '\r',  '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
 std::unordered_set<std::wstring> stopwords;
+std::unordered_set<std::wstring> stopwords1;
+std::unordered_set<std::wstring> stopwords2;
+std::unordered_set<std::wstring> stopwords3;
 std::unordered_set<wchar_t> IllegalCharSet(NotLegalW, NotLegalW + sizeof(NotLegalW) / sizeof(wchar_t));
-
 std::unordered_map<wchar_t, wchar_t> rs = {
     {L'Á',L'á'},{L'À',L'à'},{L'Ạ',L'ạ'},{L'Ả',L'ả'},{L'Ã',L'ã'},{L'Â',L'â'},{L'Ấ',L'ấ'},{L'Ầ',L'ầ'},{L'Ẩ',L'ẩ'},{L'Ẫ',L'ẫ'},
     {L'Ậ',L'ậ'},{L'Ă',L'ă'},{L'Ắ',L'ắ'},{L'Ằ',L'ằ'},{L'Ẳ',L'ẳ'},{L'Ẵ',L'ẵ'},{L'Ặ',L'ặ'},{L'É',L'é'},{L'È',L'è'},{L'Ẻ',L'ẻ'},
@@ -21,17 +23,36 @@ std::unordered_map<wchar_t, wchar_t> rs = {
     {L'B',L'b'},{L'N',L'n'},{L'M',L'm'}
 };
 
+
 void ReadStopWords(const char filename[])
 {
     _setmode(_fileno(stdout), _O_U16TEXT);
     wifstream file(filename);
     wstring s;
+    size_t NumSpace;
     while (getline(file, s))
-        //stopwords.insert(L" " + s + L" ");
-        stopwords.insert(s);
+    {
+        NumSpace = std::count(s.begin(), s.end(), ' ');
+        switch (NumSpace)
+        {
+        case 0:
+            stopwords.insert(s);
+            break;
+        case 1:
+            stopwords1.insert(s);
+            break;
+        case 2:
+            stopwords2.insert(s);
+            break;
+        case 3:
+            stopwords3.insert(s);
+            break;           
+        };
+    };
     //std::cout << "stopwords contains: ";
     //for (const std::wstring& x : stopwords) std::wcout << x << "\n";
 };
+
 string WstringToString(wstring wStr)
 {
     std::string Str;
@@ -172,28 +193,17 @@ wstring fileWstring(wstring file_name)
     std::setlocale(LC_ALL, "vi_VN.utf8");
 
     wstring s;
-    s = readFile(file_name); //49s
+    s = readFile(file_name); 
 
     //wcout << L"S OG:\n" << s << "\n\n";
     //s = cleanWstring(s); // 202-49 = 153s
     cleanWstring(s);
 
-    //wcout << L"S cleanWstring:\n" << s << "\n\n";
     wchar_t r; //replacement
     std::replace_if(s.begin(), s.end(), [&](wchar_t c) { return (rs.find(c) != rs.end())
         && (r = rs[c]); }, r); //287 - 202 = 85s
     //wcout << L"S stopword removal:\n" << s << "\n\n";
 
-    //wcout << L"S lowercase (working?):\n" << s << "\n\n"; 
-    //stopword removal
-    //size_t pos;
-    //for (const auto& elem : stopwords) {
-    //    pos = 0;
-    //    while ((pos = s.find(elem, pos)) != std::wstring::npos) {
-    //        s.erase(pos, elem.length()-1);
-    //        pos += elem.length()-1;
-    //    }
-    //}
 
     return s;
 };
@@ -213,33 +223,28 @@ wstring StopwordRemove(wstring InputString)
     {
         pos = pos + word.length();
 
-        if (stopwords.find(word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word) != stopwords.end())
+        if (stopwords3.find(word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word) != stopwords3.end())
         {
-            //wcout << (word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word) << " 4\n";
             result.erase(pos - (word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word).length(), (word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word).length() + 1);
             pos -= (word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word).length();
             continue;
         };
-        if (stopwords.find(word_3 + L' ' + word_2 + L' ' + word) != stopwords.end())
+        if (stopwords2.find(word_3 + L' ' + word_2 + L' ' + word) != stopwords2.end())
         {
-            //wcout << (word_3 + L' ' + word_2 + L' ' + word) << " 3\n";
             result.erase(pos - (word_3 + L' ' + word_2 + L' ' + word).length(), (word_3 + L' ' + word_2 + L' ' + word).length() + 1);
             pos -= (word_3 + L' ' + word_2 + L' ' + word).length();
             continue;
         };
-        if (stopwords.find(word_2 + L' ' + word) != stopwords.end())
+        if (stopwords1.find(word_2 + L' ' + word) != stopwords1.end())
         {
-            //wcout << (word_2 + L' ' + word) << " 2\n";
             result.erase(pos - (word_2 + L' ' + word).length(), (word_2 + L' ' + word).length() + 1);
             pos -= (word_2 + L' ' + word).length();
             continue;
         };
         if (stopwords.find(word) != stopwords.end())
         {
-           // wcout << (word) << " 1 " << pos - word.length() << " " << word.length() - 1 <<"\n";
             result.erase(pos - word.length(), word.length() + 1);
             pos -= word.length();
-            //pos = pos + 1;
             continue;
         };
 
@@ -252,27 +257,6 @@ wstring StopwordRemove(wstring InputString)
 };
 
 
-wstring StopwordRemove_new(wstring InputString)
-{
-    //wcout << "__________________________________________________________________\n OG: " << InputString << "\n";
-    wstring result = InputString;
-    wistringstream iss(InputString, wistringstream::in);
-    int pos;
-    wstring nigger;
-    for (auto p = stopwords.begin(); p != stopwords.end(); p++)
-    {
-        nigger = L' ' + *p + L' ';
-        pos = result.find(nigger);
-        while (pos < result.length())
-        {
-            //wcout << *p << " " << pos << " " << (*p).length() << "\n";
-            result.erase(pos, (nigger).length() - 1);
-            pos = result.find(nigger);
-        };
-    };
-    //wcout << "New Stopword: " << result << "\n" << "Old Stopword: "<< StopwordRemove_OG(InputString) << "\n\n";
-    return result;
-};
 
 wstring dondep(wstring s)
 {
@@ -292,35 +276,6 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
     wistringstream iss(InputString, wistringstream::in);
     std::map<wstring, int> gay;
     //std::map<wstring, int> gay2;
-    /*
-    //do {
-        iss >> word;
-    //} while (stopwords.find(word) != stopwords.end());
-    gay[word]++;
-    word_2 = word;
-
-    //do {
-        iss >> word;
-    //} while (stopwords.find(word) != stopwords.end());
-    gay[word]++;
-    //if (stopwords.find(word_2 + L' ' + word) == stopwords.end())
-        gay[word_2 + L' ' + word]++;
-    word_3 = word_2;
-    word_2 = word;
-
-
-    //do {
-        iss >> word;
-    //} while (stopwords.find(word) != stopwords.end());
-    gay[word]++;
-    //if (stopwords.find(word_2 + L' ' + word) == stopwords.end())
-        gay[word_2 + L' ' + word]++;
-    //if (stopwords.find(word_3 + L' ' + word_2 + L' ' + word) == stopwords.end())
-        gay[word_3 + L' ' + word_2 + L' ' + word]++;
-    word_4 = word_3;
-    word_3 = word_2;
-    word_2 = word;
-    */
     int*pairPointer;
     while (iss >> word)
     {
@@ -390,6 +345,13 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
     }
     return gay2;
 
+};
+int ReadOneFile(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename)
+{
+    wstring data = fileWstring(filename);
+    data = StopwordRemove(data);
+    FeatureMapList[filename] = FeatureSelection(data);
+    return 0;
 };
 int FeatureMapListSave(std::map<wstring, std::map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
 {
@@ -485,75 +447,4 @@ int Search(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring Ke
     };
     wcout << "ket qua: " << maxIndex << "\n";
     return 0;
-};
-/*
-bool IllegalChar(char c)
-{
-    for (int i = 0; i < len; i++)
-        if (c == NotLegal[i])
-            return true;
-    return false;
-}
-
-string cleanString(string a)
-{
-    int i = 0;
-    int len = a.length();
-    while (i < len)
-    {
-        if (IllegalChar(a[i]))
-        {
-            a.erase(i, 1);
-            len--;
-        }
-        else
-        {
-            i++;
-        };
-    };
-    return a;
-};
-string fileString(const char file_name[])
-{
-    ifstream inFile;
-    _setmode(_fileno(stdin), _O_U8TEXT);
-    //_setmode(_fileno(stdin), _O_WTEXT);
-    _setmode(_fileno(stdout), _O_U8TEXT);
-    locale::global(locale("vi_VN.utf8"));
-    //inFile.open(file_name);
-    string s;
-    std::ifstream t(file_name);
-    std::stringstream buffer;
-    buffer << t.rdbuf();
-    s = cleanString(buffer.str());
-    replace(s.begin(), s.end(), '\n', ' ');
-    while (s.find("  ") < s.length()) { s.replace(s.find("  "), sizeof(" ") - 1, " "); };
-    cout << "S:\n" << s << "\n\n";
-    return s;
-};
-*/
-
-void Bai2()
-{
-};
-void Bai3()
-{
-};
-void Bai4()
-{
-};
-void Bai5()
-{
-};
-void Bai6()
-{
-};
-void Bai7()
-{
-};
-void Bai8()
-{
-};
-void Bai9()
-{
 };

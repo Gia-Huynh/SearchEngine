@@ -9,16 +9,17 @@ void printHelp()
     wprintf(L"____________________________________________________________________\n");
     wprintf(L"|                                                                  |\n");
     wprintf(L"| 0 Thoát chương trình                                             |\n");
-    wprintf(L"| 1 Chọn thư mục                                                   |\n");
+    wprintf(L"| 1 Đọc một file                                                   |\n");
+    wprintf(L"| 2 Chọn thư mục                                                   |\n");
     if (ReadMode == 0)  
-    wprintf(L"| 2 Chọn chế độ đọc [-->> cập nhật <<-- / đọc lại tất cả]          |\n");
+    wprintf(L"| 3 Chọn chế độ đọc [-->> cập nhật <<-- / đọc lại tất cả]          |\n");
     else 
-    wprintf(L"| 2 Chọn chế độ đọc [cập nhật / -->> đọc lại tất cả <<--]          |\n");
-    wprintf(L"| 3 Cập nhật cơ sở dữ liệu                                         |\n");
-    wprintf(L"| 4 Lưu cơ sở dữ liệu                                              |\n");
-    wprintf(L"| 5 Chọn tối đa số lượng kết quả trả về ( Hiện tại:%2d )            |\n", MaxNumSearch);
-    wprintf(L"| 6 Tìm kiếm                                                       |\n");
-    wprintf(L"| 7 Hiển thị lại menu                                              |\n");
+    wprintf(L"| 3 Chọn chế độ đọc [cập nhật / -->> đọc lại tất cả <<--]          |\n");
+    wprintf(L"| 4 Đọc thư mục                                                    |\n");
+    wprintf(L"| 5 Lưu cơ sở dữ liệu                                              |\n");
+    wprintf(L"| 6 Chọn tối đa số lượng kết quả trả về ( Hiện tại:%2d )            |\n", MaxNumSearch);
+    wprintf(L"| 7 Tìm kiếm                                                       |\n");
+    wprintf(L"| 8 Hiển thị lại menu                                              |\n");
     wprintf(L"|__________________________________________________________________|\n");
 };
 
@@ -104,30 +105,30 @@ int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, lon
         fileCurrentNums++;
         t1 = time(NULL);
         if (fileCurrentNums % 100 == 0) wcout << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1 - tt1) * (fileNums - fileCurrentNums))) / fileCurrentNums << "s\n";
-        if (fileCurrentNums % 100 == 0) wcout << timeFile  << " " << timeStopWord << " " << timeFeature << " " << timeAdd << "\n";
+        //if (fileCurrentNums % 100 == 0) wcout << timeFile  << " " << timeStopWord << " " << timeFeature << " " << timeAdd << "\n";
         if ((FeatureMapList.find(FolderPath + TxtFile) == FeatureMapList.end()) || (ReadMode == 1))
         {
-            ttt1 = time(NULL);
+            //ttt1 = time(NULL);
             data = fileWstring((FolderPath + TxtFile));
             //wcout << L"____________________________________________________________________\n";
             //wcout << data << "\n\n\n";
-            timeFile += (time(NULL) - ttt1);
-            ttt1 = time(NULL);
+            //timeFile += (time(NULL) - ttt1);
+            //ttt1 = time(NULL);
 
             data = StopwordRemove(data);
             //wcout << data << "\n";
 
-            timeStopWord += (time(NULL) - ttt1);
-            ttt1 = time(NULL);
+            //timeStopWord += (time(NULL) - ttt1);
+            //ttt1 = time(NULL);
 
             FeatureMap = FeatureSelection(data);
 
-            timeFeature += (time(NULL) - ttt1);
-            ttt1 = time(NULL);
+            //timeFeature += (time(NULL) - ttt1);
+            //ttt1 = time(NULL);
 
             FeatureMapList[FolderPath + TxtFile] = FeatureMap;
 
-            timeAdd += (time(NULL) - ttt1);
+            //timeAdd += (time(NULL) - ttt1);
         }
         else
         {
@@ -186,7 +187,7 @@ int Search ()
             a = 0;
             for (auto pp = gay.begin(); pp != gay.end(); pp++)
             {
-                size_t NumSpace = std::count((pp->first).begin(), (pp->first).end(), ' ');
+                size_t NumSpace = std::count((pp->first).begin(), (pp->first).end(), ' ') + 1;
                 if (p->second.find(pp->first) != p->second.end())
                 {
                     a = a + (p->second[pp->first]) * NumSpace;
@@ -275,6 +276,7 @@ int main()
     _setmode(_fileno(stdout), _O_U16TEXT);
 
     wstring temp;
+    wstring SingleFilePath = L"NO";
     wstring IndexPath = L"Yes";
     wstring FolderPath;
     int n = 1;
@@ -332,14 +334,19 @@ int main()
             break;
         case 1:
             getline(std::wcin, temp);
+            SingleFilePath = inpWstring(L"Nhập đường dẫn tương đối (relative path) tới file: ");
+            ReadOneFile(FeatureMapList, SingleFilePath);
+            break;
+        case 2:
+            getline(std::wcin, temp);
             IndexPath = inpWstring(L"Nhập đường dẫn tương đối (relative path) tới thư mục: ");
             std::transform(IndexPath.begin(), IndexPath.end(), IndexPath.begin(), ::tolower);
             findTxt(IndexPath, FolderPath);
             break;
-        case 2:
+        case 3:
             ReadMode = SetReadMode();
             break;
-        case 3:
+        case 4:
             if (checkIndex(IndexStream, IndexPath, FolderPath) == 2) break;
             fileNums = 0;
             wcout << L"Đọc dữ liệu file index.txt....\n";
@@ -348,24 +355,25 @@ int main()
             wcout << L"Đọc dữ liệu file metadata.txt....\n";
             ReadMetadata();
             wcout << L"Done.\n";
-            wcout << L"Đọc dữ liệu cac file van bang....\n";
+            wcout << L"Đọc dữ liệu các file văn bản....\n";
             ReadAllFile(IndexStream, TxtFile, FolderPath, fileNums);
+            IndexStream.close();
             printHelp();
             break;
-        case 4:
+        case 5:
             wcout << L"Đang lưu file metadata.txt...\n";
             FeatureMapListSave(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
             wcout << L"Done.\n";
             break;
-        case 5:
+        case 6:
             SetMaxNumSearch();
             break;
-        case 6:
+        case 7:
             getline(std::wcin, temp);
             Search();
             printHelp();
             break;
-        case 7:
+        case 8:
             printHelp();
             break;
         default:
