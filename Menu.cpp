@@ -3,7 +3,10 @@
 #include "Header.h"
 #include <windows.h>
 int ReadMode = 0;
+long long t0;
 int MaxNumSearch = 3;
+std::map<wstring, int> FeatureMap;
+std::map<wstring, std::map<wstring, int>> FeatureMapList;
 void printHelp()
 {
     wprintf(L"____________________________________________________________________\n");
@@ -75,15 +78,12 @@ int countIndex(wifstream& IndexStream, wstring& TxtFile, long long& fileNums)
     return 0;
 };
 
-std::map<wstring, int> FeatureMap;
-std::map<wstring, std::map<wstring, int>> FeatureMapList;   
 int ReadMetadata ()
 {
     FeatureMapListRead(FeatureMapList, L"metadata.txt");
     ReadStopWords("vietnamese-stopwords.txt"); 
     return 0;
 };
-long long t0;
 int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, long long fileNums)
 {
     long long ttt1;
@@ -108,27 +108,12 @@ int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, lon
         //if (fileCurrentNums % 100 == 0) wcout << timeFile  << " " << timeStopWord << " " << timeFeature << " " << timeAdd << "\n";
         if ((FeatureMapList.find(FolderPath + TxtFile) == FeatureMapList.end()) || (ReadMode == 1))
         {
-            //ttt1 = time(NULL);
             data = fileWstring((FolderPath + TxtFile));
-            //wcout << L"____________________________________________________________________\n";
-            //wcout << data << "\n\n\n";
-            //timeFile += (time(NULL) - ttt1);
-            //ttt1 = time(NULL);
 
             data = StopwordRemove(data);
-            //wcout << data << "\n";
-
-            //timeStopWord += (time(NULL) - ttt1);
-            //ttt1 = time(NULL);
-
             FeatureMap = FeatureSelection(data);
 
-            //timeFeature += (time(NULL) - ttt1);
-            //ttt1 = time(NULL);
-
             FeatureMapList[FolderPath + TxtFile] = FeatureMap;
-
-            //timeAdd += (time(NULL) - ttt1);
         }
         else
         {
@@ -145,7 +130,6 @@ int Search ()
     wstring word_2 = L" ";
     wstring word_3 = L" ";
     wstring word_4 = L" ";
-    //wistringstream iss;
     if (FeatureMapList.empty() == true)
     {
         wcout << L"Chưa đọc file!\n";
@@ -168,7 +152,6 @@ int Search ()
         while (iss >> word)
         {
             gay[word]++;
-            //std::wcout << "[word]" << word << "Gay [word]: " << gay[word] << "\n";
             if (word_2 != L" ") gay[word_2 + L' ' + word]++;
             if (word_3 != L" ") gay[word_3 + L' ' + word_2 + L' ' + word]++;
             if (word_4 != L" ")  gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
@@ -281,46 +264,14 @@ int main()
     wstring FolderPath;
     int n = 1;
 
-    /*
-    IndexPath = inpWstring(L"Nhap duong dan tuong doi (relative path): ");
-
-    t0 = time(NULL);
-    long long t1;
-
-    findTxt(IndexPath, FolderPath);
-    wcout << L"Index.txt location: " << IndexPath << endl;
-    wcout << L"Folder path: " << FolderPath << endl;
-    
-
-    wifstream IndexStream;
-    checkIndex(IndexStream, IndexPath, FolderPath);
-
-    wstring TxtFile;
-    long long fileNums = 0;
-    countIndex(IndexStream, TxtFile, fileNums);
-    
-
-    ReadMetadata();
-
-    wcout << "Reading files....\n";
-    ReadFile(IndexStream, TxtFile, FolderPath, fileNums);
-
-    wcout << "Saving metadata.txt...\n";
-    FeatureMapListSave(FeatureMapList, L"metadata.txt", ENCODING_UTF8);
-    
-    
-    
-    IndexStream.close();
-    t1 = time(NULL);
-    wcout << "Total time elapsed: " << t1 - t0 <<"\n";
-       
-    */
-
     //Below this line is full of shit
-
+    generate_hash("vietnamese-stopwords.txt");
     wifstream IndexStream;
     wstring TxtFile;
     long long fileNums;
+    wcout << L"Đọc dữ liệu file metadata.txt....\n";
+    ReadMetadata();
+    wcout << L"Done.\n";
     printHelp();
     while (true)
     {
@@ -351,9 +302,6 @@ int main()
             fileNums = 0;
             wcout << L"Đọc dữ liệu file index.txt....\n";
             countIndex(IndexStream, TxtFile, fileNums);
-            wcout << L"Done.\n";
-            wcout << L"Đọc dữ liệu file metadata.txt....\n";
-            ReadMetadata();
             wcout << L"Done.\n";
             wcout << L"Đọc dữ liệu các file văn bản....\n";
             ReadAllFile(IndexStream, TxtFile, FolderPath, fileNums);

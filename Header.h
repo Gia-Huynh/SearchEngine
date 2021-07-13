@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef  __BaiTapList_H__
 #define  __BaiTapList_H__
 
@@ -48,7 +48,7 @@ namespace OurFunkyLibrary
     using std::endl;
 }
 using namespace OurFunkyLibrary;
-
+void generate_hash(const char filename[]);
 wstring inpWstring(wstring message);
 string inpString(string message);
 string WstringToString(wstring wStr);
