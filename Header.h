@@ -61,5 +61,53 @@ int FeatureMapListSave(std::map<wstring, std::map<wstring, int>>& FeatureMapList
 int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename);
 int ReadOneFile(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename);
 wstring dondep(wstring s);
+unsigned long int hashFunction(wchar_t s);
+unsigned long int hashFunction(wstring s);
+template <class T>
+class unordered_set
+{
+public:
+    T element;
+
+private:
+    int top;
+    T* nigger = new T[204601]();
+
+public:
+    unordered_set()
+    {
+    };
+    unordered_set(wchar_t* a, wchar_t* b)
+    {
+        wchar_t* c = a;
+        while (c != b)
+        {
+            insert(*c);
+            c++;
+        };
+    };
+    void insert(T newElement)
+    {
+        unsigned long int index = hashFunction(newElement);
+        //wcout << "Old value: " << nigger[index] << " New value: " << newElement << "\n";
+        //if (strlen(nigger[index]) != 0) wcout << "Hash table error! Old value: "<< nigger[index] << " New value: " << newElement << "\n";
+        nigger[index] = newElement;
+    };
+
+    int find(T findElement)
+    {
+        unsigned long int index = hashFunction(findElement);
+        //if (strlen(&nigger[index]) == 0) return 0;
+        //if (nigger[index] == 0) return 0;
+        if (nigger[index] == findElement) return 1;
+        //wcout << "\n" << nigger[index] << " " << findElement << "\n";
+        return 0;
+    };
+    void clean()
+    {
+        delete[] T;
+    };
+};
+
 
 #endif // _BaiTapList_H_ 

@@ -4,6 +4,25 @@ using namespace OurFunkyLibrary;
 
 wchar_t NotLegalW[] = {L'\r', L'\n', '~','`','!','@','#','$','%','^','&','*','(',')','-','_','+','=','[',']','{','}','|','\\',';',':','\'','\"',',','<','.','>','/','?' };
 int len = sizeof(NotLegalW) / sizeof(wchar_t);
+
+unsigned long int hashFunction(wchar_t s)
+{
+    return unsigned long int(s);
+};
+
+unsigned long int hashFunction(wstring s)
+{
+    unsigned long int hash_size = 0;
+    //hash_size = (unsigned long int(s[0]) ^ 1);
+    for (auto i = 0; i < s.length(); i++)
+    {
+        hash_size = hash_size * 17 + unsigned long int(s[i]);
+    };
+    //hash_size = hash_size % 4000000; //gooood
+    hash_size = hash_size % 204601; //gooood
+    return hash_size;
+};
+/*
 template <class T>
 class unordered_set 
 {
@@ -68,13 +87,62 @@ public:
         };
     };
 };
+*/
 
 
-template <class T, class U>
-class unordered_map
+/*
+template <class T>
+class unordered_set
 {
 public:
-    //T element;
+    T element;
+
+private:
+    int top;
+    T* nigger = new T[204601] ();
+
+public:
+    unordered_set()
+    {
+    };
+    unordered_set(wchar_t* a, wchar_t* b)
+    {
+        wchar_t* c = a;
+        while (c != b)
+        {
+            insert(*c);
+            c++;
+        };
+    };
+    void insert(T newElement)
+    {
+        unsigned long int index = hashFunction(newElement);
+        //wcout << "Old value: " << nigger[index] << " New value: " << newElement << "\n";
+        //if (strlen(nigger[index]) != 0) wcout << "Hash table error! Old value: "<< nigger[index] << " New value: " << newElement << "\n";
+        nigger[index] = newElement;
+    };
+
+    int find(T findElement)
+    {
+        unsigned long int index = hashFunction(findElement);
+        //if (strlen(&nigger[index]) == 0) return 0;
+        //if (nigger[index] == 0) return 0;
+        if (nigger[index] == findElement) return 1;
+        //wcout << "\n" << nigger[index] << " " << findElement << "\n";
+        return 0;
+    };
+    void clean()
+    {
+        delete[] T;
+    };
+};
+*/
+
+
+/*template <class T, class U>
+class wtf_map
+{
+public:
 
 private:
     struct nigger
@@ -169,6 +237,56 @@ public:
         };
     };
 };
+*/
+
+template <class T, class U>
+class unordered_map
+{
+public:
+
+private:
+    T* nigger = new T[204601]();
+    U* nigger2 = new U[204601]();
+
+public:
+    unordered_map()
+    {
+    };
+    void operator = (const std::initializer_list<std::pair <T, U>> &faggot)
+    {
+        for (auto i = faggot.begin(); i != faggot.end(); i++)
+        {
+            insert(i->first, i->second);
+        };
+    };
+    U operator [] (const T gayy)
+    {
+        unsigned long int index = hashFunction(gayy);
+        return nigger2[index];
+    };
+    void insert(T newElement, U newKey)
+    {
+        unsigned long int index = hashFunction(newElement);
+        nigger[index] = newElement;
+        nigger2[index] = newKey;
+    };
+
+    int find(T findElement)
+    {
+        unsigned long int index = hashFunction(findElement);
+        if (nigger[index] == findElement) return 1;
+        return 0;
+    };
+    int end()
+    {
+        return 0;
+    };
+    void clean()
+    {
+        delete[] T;
+        delete[] U;
+    };
+};
 
 unordered_set<std::wstring> stopwords;
 unordered_set<std::wstring> stopwords1;
@@ -179,9 +297,6 @@ unordered_set<wchar_t> IllegalCharSet(NotLegalW, NotLegalW + sizeof(NotLegalW) /
 
 void ReadStopWords(const char filename[])
 {
-    unordered_map <wstring, int> gaynigger;
-    gaynigger.insert(L"Test", 15);
-    gaynigger[L"gayy"];
     _setmode(_fileno(stdout), _O_U16TEXT);
     wifstream file(filename);
     wstring s;
@@ -205,69 +320,110 @@ void ReadStopWords(const char filename[])
             break;           
         };
     };
+
+
+    file.clear();
+    file.seekg(0);
+    while (getline(file, s))
+    {
+        NumSpace = std::count(s.begin(), s.end(), ' ');
+        switch (NumSpace)
+        {
+        case 0:
+            if (!stopwords.find(s)) wcout << "found it " << s << "\n";
+            break;
+        case 1:
+            if (!stopwords1.find(s)) wcout << "found it " << s << "\n";
+            break;
+        case 2:
+            if (!stopwords2.find(s)) wcout << "found it " << s << "\n";
+            break;
+        case 3:
+            if (!stopwords3.find(s)) wcout << "found it " << s << "\n";
+            break;
+        };
+    };
+
     //std::cout << "stopwords contains: ";
     //for (const std::wstring& x : stopwords) std::wcout << x << "\n";
 };
 void generate_hash(const char filename[])
 {
     _setmode(_fileno(stdout), _O_U16TEXT);
-    wifstream file(filename);
+    //wifstream file(filename);
     wstring s;
     size_t NumSpace;
     unsigned long int hash_size = 0;
-    std::unordered_set<unsigned long int> gay1;
-    std::unordered_set<unsigned long int> gay2;
-    std::unordered_set<unsigned long int> gay3;
-    std::unordered_set<unsigned long int> gay4;
-    while (getline(file, s))
+    int niggerr[600] = { 200513,200569,200573,200579,200587,200591,200597,200609,200639,200657,200671,200689,200699,200713,200723,200731,200771,200779,200789,200797,200807,200843,200861,200867,200869,200881,200891,200899,200903,200909,200927,200929,200971,200983,200987,200989,201007,201011,201031,201037,201049,201073,201101,201107,201119,201121,201139,201151,201163,201167,201193,201203,201209,201211,201233,201247,201251,201281,201287,201307,201329,201337,201359,201389,201401,201403,201413,201437,201449,201451,201473,201491,201493,201497,201499,201511,201517,201547,201557,201577,201581,201589,201599,201611,201623,201629,201653,201661,201667,201673,201683,201701,201709,201731,201743,201757,201767,201769,201781,201787,201791,201797,201809,201821,201823,201827,201829,201833,201847,201881,201889,201893,201907,201911,201919,201923,201937,201947,201953,201961,201973,201979,201997,202001,202021,202031,202049,202061,202063,202067,202087,202099,202109,202121,202127,202129,202183,202187,202201,202219,202231,202243,202277,202289,202291,202309,202327,202339,202343,202357,202361,202381,202387,202393,202403,202409,202441,202471,202481,202493,202519,202529,202549,202567,202577,202591,202613,202621,202627,202637,202639,202661,202667,202679,202693,202717,202729,202733,202747,202751,202753,202757,202777,202799,202817,202823,202841,202859,202877,202879,202889,202907,202921,202931,202933,202949,202967,202973,202981,202987,202999,203011,203017,203023,203039,203051,203057,203117,203141,203173,203183,203207,203209,203213,203221,203227,203233,203249,203279,203293,203309,203311,203317,203321,203323,203339,203341,203351,203353,203363,203381,203383,203387,203393,203417,203419,203429,203431,203449,203459,203461,203531,203549,203563,203569,203579,203591,203617,203627,203641,203653,203657,203659,203663,203669,203713,203761,203767,203771,203773,203789,203807,203809,203821,203843,203857,203869,203873,203897,203909,203911,203921,203947,203953,203969,203971,203977,203989,203999,204007,204013,204019,204023,204047,204059,204067,204101,204107,204133,204137,204143,204151,204161,204163,204173,204233,204251,204299,204301,204311,204319,204329,204331,204353,204359,204361,204367,204371,204377,204397,204427,204431,204437,204439,204443,204461,204481,204487,204509,204511,204517,204521,204557,204563,204583,204587,204599,204601,204613,204623,204641,204667,204679,204707,204719,204733,204749,204751,204781,204791,204793,204797,204803,204821,204857,204859,204871,204887,204913,204917,204923,204931,204947,204973,204979,204983,205019,205031,205033,205043,205063,205069,205081,205097,205103,205111,205129,205133,205141,205151,205157,205171,205187,205201,205211,205213,205223,205237,205253,205267,205297,205307,205319,205327,205339,205357,205391,205397,205399,205417,205421,205423,205427,205433,205441,205453,205463,205477,205483,205487,205493,205507,205519,205529,205537,205549,205553,205559,205589,205603,205607,205619,205627,205633,205651,205657,205661,205663,205703,205721,205759,205763,205783,205817,205823,205837,205847,205879,205883,205913,205937,205949,205951,205957,205963,205967,205981,205991,205993,206009,206021,206027,206033,206039,206047,206051,206069,206077,206081,206083,206123,206153,206177,206179,206183,206191,206197,206203,206209,206221,206233,206237,206249,206251,206263,206273,206279,206281,206291,206299,206303,206341,206347,206351,206369,206383,206399,206407,206411,206413,206419,206447,206461,206467,206477,206483,206489,206501,206519,206527,206543,206551,206593,206597,206603,206623,206627,206639,206641,206651,206699,206749,206779,206783,206803,206807,206813,206819,206821,206827,206879,206887,206897,206909,206911,206917,206923,206933,206939,206951,206953,206993,207013,207017,207029,207037,207041,207061,207073,207079,207113,207121,207127,207139,207169,207187,207191,207197,207199,207227,207239,207241,207257,207269,207287,207293,207301,207307,207329,207331,207341,207343,207367,207371,207377,207401,207409,207433,207443,207457,207463,207469,207479,207481,207491,207497,207509,207511,207517,207521,207523,207541,207547,207551,207563,207569,207589,207593,207619,207629,207643,207653,207661,207671,207673,207679,207709,207719,207721,207743,207763,207769,207797,207799,207811,207821,207833,207847,207869,207877 
+    };
+    for (int i = 0; i < 599; i++)
     {
-        hash_size = 0;
-        //hash_size = (unsigned long int(s[0]) ^ 1);
-        for (auto i = 0; i < s.length(); i++)
+        wifstream file(filename);
+        std::unordered_set<unsigned long int> gay1;
+        std::unordered_set<unsigned long int> gay2;
+        std::unordered_set<unsigned long int> gay3;
+        std::unordered_set<unsigned long int> gay4;
+        bool check = true;
+        while (getline(file, s))
         {
-            hash_size = hash_size * 17 + unsigned long int(s[i]);
-        };
-        //hash_size = hash_size % 4000000; //gooood
-        hash_size = hash_size % 1000007;
+            if (check == false) break;
+            hash_size = 0;
+            //hash_size = (unsigned long int(s[0]) ^ 1);
+            for (auto j = 0; j < s.length(); j++)
+            {
+                hash_size = hash_size * 17 + unsigned long int(s[j]);
+            };
+            //hash_size = hash_size % 4000000; //gooood
+            //hash_size = hash_size % 1000007; //gooood too
+            //hash_size = hash_size % 500009; //gooood
+            // 204601 gud, perhaps
+            hash_size = hash_size % niggerr [i]; //gooood
 
-        NumSpace = std::count(s.begin(), s.end(), ' ');
-        switch (NumSpace)
-        {
-        case 0:
-            if (gay1.find(hash_size) != gay1.end())
+            NumSpace = std::count(s.begin(), s.end(), ' ');
+            switch (NumSpace)
             {
-                wcout << s << " " << hash_size << " FUCK NO\n";
-                return;
+            case 0:
+                if (gay1.find(hash_size) != gay1.end())
+                {
+                    //wcout << s << " " << hash_size << " FUCK NO\n";
+                    check = false; break;
+                    return;
+                };
+                gay1.insert(hash_size);
+                break;
+            case 1:
+                if (gay2.find(hash_size) != gay2.end())
+                {
+                    //wcout << s << " " << hash_size << " FUCK NO\n";
+                    check = false; break;
+                    return;
+                };
+                gay2.insert(hash_size);
+                break;
+            case 2:
+                if (gay3.find(hash_size) != gay3.end())
+                {
+                    //wcout << s << " " << hash_size << " FUCK NO\n";
+                    check = false; break;
+                    return;
+                };
+                gay3.insert(hash_size);
+                break;
+            case 3:
+                if (gay4.find(hash_size) != gay4.end())
+                {
+                    //wcout << s << " " << hash_size << " FUCK NO\n";
+                    check = false; break;
+                    return;
+                };
+                gay4.insert(hash_size);
+                break;
             };
-            gay1.insert(hash_size);
-            break;
-        case 1:
-            if (gay2.find(hash_size) != gay2.end())
-            {
-                wcout << s << " " << hash_size << " FUCK NO\n";
-                return;
-            };
-            gay2.insert(hash_size);
-            break;
-        case 2:
-            if (gay3.find(hash_size) != gay3.end())
-            {
-                wcout << s << " " << hash_size << " FUCK NO\n";
-                return;
-            };
-            gay3.insert(hash_size);
-            break;
-        case 3:
-            if (gay4.find(hash_size) != gay4.end())
-            {
-                wcout << s << " " << hash_size << " FUCK NO\n";
-                return;
-            };
-            gay4.insert(hash_size);
-            break;
-        };
 
-        wcout << s << " " << hash_size << "\n";
+            //wcout << s << " " << hash_size << "\n";
+        };
+        file.close();
+        if (check == true) wcout << "\nFOUND IT " << niggerr[i] << "\n"; else wcout << i << " ";
     };
 };
 string WstringToString(wstring wStr)
@@ -406,7 +562,8 @@ std::wstring readFile(wstring path)
 
 wstring fileWstring(wstring file_name)
 {
-    std::unordered_map<wchar_t, wchar_t> rs = {
+    unordered_map<wchar_t, wchar_t> rs;
+    rs = {
         {L'Á',L'á'},{L'À',L'à'},{L'Ạ',L'ạ'},{L'Ả',L'ả'},{L'Ã',L'ã'},{L'Â',L'â'},{L'Ấ',L'ấ'},{L'Ầ',L'ầ'},{L'Ẩ',L'ẩ'},{L'Ẫ',L'ẫ'},
         {L'Ậ',L'ậ'},{L'Ă',L'ă'},{L'Ắ',L'ắ'},{L'Ằ',L'ằ'},{L'Ẳ',L'ẳ'},{L'Ẵ',L'ẵ'},{L'Ặ',L'ặ'},{L'É',L'é'},{L'È',L'è'},{L'Ẻ',L'ẻ'},
         {L'Ẽ',L'ẽ'},{L'Ẹ',L'ẹ'},{L'Ê',L'ê'},{L'Ế',L'ế'},{L'Ề',L'ề'},{L'Ệ',L'ệ'},{L'Ễ',L'ễ'},{L'Ể',L'ể'},{L'Ú',L'ú'},{L'Ù',L'ù'},
@@ -487,7 +644,8 @@ wstring StopwordRemove(wstring InputString)
 };
 wstring dondep(wstring s)
 {
-    std::unordered_map<wchar_t, wchar_t> rs = {
+    std::unordered_map<wchar_t, wchar_t> rs;
+    rs = {
         {L'Á',L'á'},{L'À',L'à'},{L'Ạ',L'ạ'},{L'Ả',L'ả'},{L'Ã',L'ã'},{L'Â',L'â'},{L'Ấ',L'ấ'},{L'Ầ',L'ầ'},{L'Ẩ',L'ẩ'},{L'Ẫ',L'ẫ'},
         {L'Ậ',L'ậ'},{L'Ă',L'ă'},{L'Ắ',L'ắ'},{L'Ằ',L'ằ'},{L'Ẳ',L'ẳ'},{L'Ẵ',L'ẵ'},{L'Ặ',L'ặ'},{L'É',L'é'},{L'È',L'è'},{L'Ẻ',L'ẻ'},
         {L'Ẽ',L'ẽ'},{L'Ẹ',L'ẹ'},{L'Ê',L'ê'},{L'Ế',L'ế'},{L'Ề',L'ề'},{L'Ệ',L'ệ'},{L'Ễ',L'ễ'},{L'Ể',L'ể'},{L'Ú',L'ú'},{L'Ù',L'ù'},

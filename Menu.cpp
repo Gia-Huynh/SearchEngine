@@ -5,6 +5,179 @@
 int ReadMode = 0;
 long long t0;
 int MaxNumSearch = 3;
+
+/*
+template <typename  T>
+void quicksort(T* begin, T* end, T* begin2, T* end2)
+{
+    T gaynigger;
+    if (begin <= end)
+    {
+        T pivot = *begin;
+        T* i = (begin - 1);  // Index of smaller element
+        T* i2 = (begin2 - 1); //wtf
+        for (T* j = begin; j <= end - 1; j++)
+        {
+            if (*j <= pivot)
+            {
+                i++;
+
+                gaynigger = i*;
+                i* = j*;
+                j* = gaynigger;
+
+
+                gaynigger = i2*;
+                i2* = (j - begin + begin2)*;
+                (j - begin + begin2)* = gaynigger;
+            }
+        };
+
+        gaynigger = (i+1)*;
+        i* = end*;
+        end* = gaynigger;
+
+
+        gaynigger = (i2+1)*;
+        (i2 + 1)* = (end2)*;
+        (end2)* = gaynigger;
+
+
+        T* center = (i + 1);
+        quicksort(begin, center - 1);
+        quicksort(center+1, end);
+    }
+};
+*/
+
+template <typename  T>
+void quicksort(T* begin, T* end)
+{
+    T gaynigger;
+    if (begin <= end)
+    {
+        T pivot = (*begin).first;
+        T* i = (begin - 1);  // Index of smaller element
+        for (T* j = begin; j <= end - 1; j++)
+        {
+            if ((*j).first <= pivot)
+            {
+                i++;
+
+                gaynigger = i*;
+                i* = j*;
+                j* = gaynigger;
+
+            }
+        };
+
+        gaynigger = (*(i + 1));
+        *i = *end;
+        end* = gaynigger;
+
+
+        T* center = (i + 1);
+        quicksort(begin, center - 1);
+        quicksort(center + 1, end);
+    }
+};
+template <class T, class U>
+class wtf_map
+{
+public:
+    U default_value;
+private:
+    std::vector<pair<T, U>> nigger;
+public:
+    wtf_map()
+    {
+    };
+    void operator = (const std::initializer_list<std::pair <T, U>>& faggot)
+    {
+        for (auto i = faggot.begin(); i != faggot.end(); i++)
+        {
+            insert(i->first, i->second);
+        };
+    };
+    U* operator [] (const T gayy)
+    {
+        std::vector<pair<T, U>>::iterator low = nigger.begin();
+        std::vector<pair<T, U>>::iterator high = nigger.end();
+        std::vector<pair<T, U>>::iterator center = (nigger.end() - nigger.begin()) / 2 + nigger.begin();
+        wcout << "searching... asdasd\n";
+        while (low < high)
+        {
+            center = (high - low) / 2 + low;
+            if (gayy > center.first)
+            {
+                low = center + 1;
+            }
+            else high = center;
+        };
+        wcout << "done searching... asdasd\n";
+        if (center.first == gayy) return &center.second;
+
+        insert (gayy, default_value);
+
+        low = nigger.begin();
+        high = nigger.end();
+        wcout << "searching 2... asdasd\n";
+        while (low < high)
+        {
+            center = (high - low) / 2 + low;
+            if (gayy > center.first)
+            {
+                low = center + 1;
+            }
+            else high = center;
+        };
+        wcout << "done searching 2... asdasd\n";
+        if (center.first == gayy) return &center.second;
+    };
+    void insert(T newElement, U newKey)
+    {
+        nigger.push_back(std::make_pair(newElement, newKey));
+        quicksort(nigger.begin(), nigger.end());
+    };
+    std::vector<pair<T, U>>::iterator begin()
+    {
+        return nigger.begin();
+    };
+    std::vector<pair<T, U>>::iterator end()
+    {
+        return nigger.end();
+    };
+    std::vector<T>::iterator find(T findElement)
+    {
+        //Binary search tree baby
+
+        std::vector<pair<T, U>>::iterator low = nigger.begin();
+        std::vector<pair<T, U>>::iterator high = nigger.end();
+        std::vector<pair<T, U>>::iterator center = (nigger.end() - nigger.begin()) / 2 + nigger.begin();
+        wcout << "searching... asdasd\n";
+        while (low < high)
+        {
+            center = (high - low) / 2 + low;
+            if (gayy > center.first)
+            {
+                low = center + 1;
+            }
+            else high = center;
+        };
+        wcout << "done searching... asdasd\n";
+        if (center.first == gayy) return center;
+        return nigger.end();
+    };
+
+    void clean()
+    {
+    };
+};
+
+
+
+//wtf_map <wstring, int> FeatureMap;
+//wtf_map<wstring, std::map<wstring, int>> FeatureMapList;
 std::map<wstring, int> FeatureMap;
 std::map<wstring, std::map<wstring, int>> FeatureMapList;
 void printHelp()
@@ -265,13 +438,17 @@ int main()
     int n = 1;
 
     //Below this line is full of shit
-    generate_hash("vietnamese-stopwords.txt");
+    //generate_hash("vietnamese-stopwords.txt");
+    //return 0;
+
+
     wifstream IndexStream;
     wstring TxtFile;
     long long fileNums;
     wcout << L"Đọc dữ liệu file metadata.txt....\n";
     ReadMetadata();
     wcout << L"Done.\n";
+
     printHelp();
     while (true)
     {
