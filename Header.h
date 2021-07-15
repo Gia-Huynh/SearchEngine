@@ -48,6 +48,214 @@ namespace OurFunkyLibrary
     using std::endl;
 }
 using namespace OurFunkyLibrary;
+
+template <typename  T, typename U>
+void quicksort(T begin, T end, U test);
+template <class T, class U>
+class wtf_map
+{
+public:
+    U default_value;
+    long top = 0;
+    bool sorted = 0;
+private:
+    std::vector<std::pair<T, U>> nigger;
+public:
+    wtf_map()
+    {
+        nigger.reserve(20);
+    };
+    void operator = (const std::initializer_list<std::pair <T, U>>& faggot)
+    {
+        for (auto i = faggot.begin(); i != faggot.end(); i++)
+        {
+            insert(i->first, i->second);
+        };
+    };
+    /*
+    U* operator [] (const T gayy)
+    {
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> low = begin();
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> high = end();
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> center = (high - low) / 2 + low;
+        wcout << "searching... []\n";
+        while (low < high)
+        {
+            center = (high - low) / 2 + low;
+            if (gayy > (*center).first)
+            {
+                low = center + 1;
+            }
+            else high = center;
+        };
+        wcout << "done searching... [] 2\n";
+        if (begin() != end()) if ((*center).first == gayy) return &(*center).second;
+
+        wcout << "No value detected, creating new\n";
+        U gaynigger = default_value;
+        insert(gayy, gaynigger);
+
+        top++;
+        low = begin();
+        high = end();
+        while (low < high)
+        {
+            center = (high - low) / 2 + low;
+            if (gayy > (*center).first)
+            {
+                low = center + 1;
+            }
+            else high = center;
+        };
+        wcout << "done searching... 3\n";
+        if ((*center).first == gayy) return &(*center).second;
+        wcout << " Ummmmmmm W T F\n";
+        return nullptr;
+        //if ((*center).first == gayy) return &((*center).second);
+       // return &(begin()->second);
+    };*/
+
+    U* operator [] (const T gayy)
+    {
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> low = begin();
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> high = end();
+        //wcout << "searching... []\n";
+        for (auto i = low; i != high; i++)
+        {
+            if (i->first == gayy) 
+            {
+                //wcout << L"Found []\n"; 
+                return &(i->second);
+            };
+        };
+        //wcout << "No value detected, creating new " << gayy << " \n";
+        U gaynigger = default_value;
+        insert(gayy, gaynigger);
+        low = begin();
+        high = end();
+        for (auto i = low; i != high; i++)
+        {
+            if (i->first == gayy)
+            {
+                //wcout << L"Found []\n"; 
+                return &(i->second);
+            };
+        };
+        wcout << " Ummmmmmm W T F\n";
+        return nullptr;
+        //if ((*center).first == gayy) return &((*center).second);
+       // return &(begin()->second);
+    };
+    void insert(T newElement, U newKey)
+    {
+        top++;
+        //wcout << "insert(T newElement, U newKey)\n";
+        nigger.push_back(std::make_pair(newElement, newKey));
+        sorted = 0;
+        //wcout << "Quicksorting...\n";
+        //if (top == 20)
+        //{
+        //    wcout << "____________\nSorted \n";
+        //    for (auto i = begin(); i != end(); i++)
+        //   {
+        //        wcout << i->first << "\n";
+        //    };
+        //};
+    };
+    void sort()
+    {
+        wcout << "void sort() end() - 1\n";
+        quicksort(begin(), end()-1, *(begin()));
+    };
+    std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> quick_find(T findElement)
+    {
+        if (top == 0) return end();
+        //if (sorted == 0)
+        //{
+            //wcout << "sorting";
+        //    sort();
+        //    sorted = 1;
+        //};
+        ////Binary search
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> low = begin();
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> high = end()-1;
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> center = (high - low) / 2 + low;
+        //wcout << " find(T findElement)\n";
+        while (low < high)
+        {
+            center = (high - low) / 2 + low;
+            if (findElement > (*center).first)
+            {
+                low = center + 1;
+            }
+            else high = center;
+            if (high == low + 1)
+            {
+                if (findElement == (*low).first) return low;
+                if (findElement == (*high).first) return high;
+                return end();
+            };
+        };
+        //wcout << "done find(T findElement)\n";
+        if ((*center).first == findElement) { 
+            //wcout << "done return find(T findElement)\n"; 
+            return center; }
+        //wcout << "Uhh.....\n";
+        return end();
+    };
+    void insert(std::pair <T, U> a)
+    {
+        insert(a.first, a.second);
+    };
+    std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> begin()
+    {
+        return nigger.begin();
+    };
+    std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> end()
+    {
+        return nigger.end();
+    };
+    std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> find(T findElement)
+    {
+        if (top == 0) return end();
+
+        //std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> low = begin();
+        std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> high = end();
+        //wcout << "searching... []\n";
+        for (auto i = begin(); i != high; i++)
+        {
+            if (i->first == findElement)
+            {
+                //wcout << L"Found []\n"; 
+                return i;
+            };
+        };
+
+        return end();
+
+    };
+    void clear()
+    {
+        nigger.clear();
+
+    };
+    void optimize()
+    {
+        nigger.resize(top);
+        nigger.shrink_to_fit();
+    };
+    void resize(long long a)
+    {
+        nigger.reserve(a + top);
+    };
+    void clean()
+    {
+    };
+};
+
+
+
+
 void generate_hash(const char filename[]);
 wstring inpWstring(wstring message);
 string inpString(string message);
@@ -55,11 +263,11 @@ string WstringToString(wstring wStr);
 wstring StringToWstring(string Str);
 std::wstring readFile(wstring path);
 wstring fileWstring(wstring file_name);
-std::map<wstring, int> FeatureSelection(wstring InputString);
+wtf_map<wstring, int> FeatureSelection(wstring InputString);
 wstring StopwordRemove(wstring InputString);
-int FeatureMapListSave(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename, int encoding);
-int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename);
-int ReadOneFile(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename);
+int FeatureMapListSave(wtf_map<wstring, wtf_map<wstring, int>>& FeatureMapList, wstring filename, int encoding);
+int FeatureMapListRead(wtf_map<wstring, wtf_map<wstring, int>>& FeatureMapList, wstring filename);
+int ReadOneFile(wtf_map<wstring, wtf_map<wstring, int>>& FeatureMapList, wstring filename);
 wstring dondep(wstring s);
 unsigned long int hashFunction(wchar_t s);
 unsigned long int hashFunction(wstring s);

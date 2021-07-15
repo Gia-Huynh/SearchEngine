@@ -2,78 +2,35 @@
 //
 #include "Header.h"
 #include <windows.h>
-int ReadMode = 0;
+int ReadMode = 1;
 long long t0;
 int MaxNumSearch = 3;
-
 /*
-template <typename  T>
-void quicksort(T* begin, T* end, T* begin2, T* end2)
-{
-    T gaynigger;
-    if (begin <= end)
-    {
-        T pivot = *begin;
-        T* i = (begin - 1);  // Index of smaller element
-        T* i2 = (begin2 - 1); //wtf
-        for (T* j = begin; j <= end - 1; j++)
-        {
-            if (*j <= pivot)
-            {
-                i++;
-
-                gaynigger = i*;
-                i* = j*;
-                j* = gaynigger;
-
-
-                gaynigger = i2*;
-                i2* = (j - begin + begin2)*;
-                (j - begin + begin2)* = gaynigger;
-            }
-        };
-
-        gaynigger = (i+1)*;
-        i* = end*;
-        end* = gaynigger;
-
-
-        gaynigger = (i2+1)*;
-        (i2 + 1)* = (end2)*;
-        (end2)* = gaynigger;
-
-
-        T* center = (i + 1);
-        quicksort(begin, center - 1);
-        quicksort(center+1, end);
-    }
-};
-*/
-
 template <typename  T>
 void quicksort(T* begin, T* end)
 {
     T gaynigger;
+    T pivot;
     if (begin <= end)
     {
-        T pivot = (*begin).first;
+        pivot.first = begin->first;
         T* i = (begin - 1);  // Index of smaller element
         for (T* j = begin; j <= end - 1; j++)
         {
-            if ((*j).first <= pivot)
+            if ((*j).first <= pivot.first)
             {
                 i++;
 
-                gaynigger = i*;
-                i* = j*;
-                j* = gaynigger;
+                gaynigger = *i;
+                *i = *j;
+                *j = gaynigger;
 
             }
         };
 
         gaynigger = (*(i + 1));
         *i = *end;
-        end* = gaynigger;
+        *end = gaynigger;
 
 
         T* center = (i + 1);
@@ -81,7 +38,59 @@ void quicksort(T* begin, T* end)
         quicksort(center + 1, end);
     }
 };
-template <class T, class U>
+*/
+template <typename  T, typename U>
+void quicksort(T begin, T end, U test)
+{    
+    //ALL GOOD 
+    /*
+    auto k = begin;
+    for (auto i = begin; (i+1) != end; i++)
+    {
+        k = i;
+        for (auto j = i+1; j != end; j++)
+        {
+            if (k->first > j->first)
+            {
+                k = j;
+            };
+        };
+        iter_swap(i, k);
+    };
+    return;
+    */
+    if (begin >= end) return;
+    T gaynigger;
+    auto pivot = (end - begin)/2 + begin;
+    if (begin < end)
+    {
+        pivot = (end - begin)/2 + begin;
+        //pivot = begin->first;
+        T left = begin;
+        T right = end;
+        while (true)
+        {
+            if (left->first < pivot->first) {};
+            while (left <= right && left->first < pivot->first) {left++; }
+            while (right >= left && right->first > pivot->first) {right--; };
+            if (left >= right) break;
+            //wcout << "Swap: " << left->first << " " << right->first << "\n";
+            iter_swap(left, right);
+            left++;
+            right--;
+        };
+        //wcout << "Swap: " << left->first << " " << right->first << "\n";
+        //iter_swap(left, right);
+
+        if (pivot != begin)
+            quicksort(begin, pivot, test);
+        if (pivot != end)
+            quicksort(pivot+1, end, test);
+    };
+    //wcout << "Done!\n";
+};
+
+/*template <class T, class U>
 class wtf_map
 {
 public:
@@ -173,13 +182,13 @@ public:
     {
     };
 };
-
+*/
 
 
 //wtf_map <wstring, int> FeatureMap;
-//wtf_map<wstring, std::map<wstring, int>> FeatureMapList;
-std::map<wstring, int> FeatureMap;
-std::map<wstring, std::map<wstring, int>> FeatureMapList;
+//wtf_map<wstring, wtf_map<wstring, int>> FeatureMapList;
+wtf_map<wstring, int> FeatureMap;
+wtf_map<wstring, wtf_map<wstring, int>> FeatureMapList;
 void printHelp()
 {
     wprintf(L"____________________________________________________________________\n");
@@ -238,6 +247,10 @@ int checkIndex(wifstream &IndexStream, wstring IndexPath, wstring FolderPath)
         IndexStream.open(IndexPath);
 
     }
+    else
+    {
+        wcout << L"Đã tồn tại file \"index.txt\", tiến hành đọc.\n";
+    };
     return 0;
 };
 
@@ -273,25 +286,49 @@ int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, lon
     long long t1;
     long long fileCurrentNums = 0;
     wstring data;
-    wcout << L"Chế độ đọc hiện tại: " << ReadMode << "\n";
+    wcout << L"Chế độ đọc hiện tại test: " << ReadMode << "\n";
+    FeatureMapList.resize(fileNums);
     while ((getline(IndexStream, TxtFile))) {
         fileCurrentNums++;
         t1 = time(NULL);
-        if (fileCurrentNums % 100 == 0) wcout << fileCurrentNums << "/" << fileNums << " ETA: " << float(((t1 - tt1) * (fileNums - fileCurrentNums))) / fileCurrentNums << "s\n";
+        if (fileCurrentNums % 100 == 0) wcout << fileCurrentNums << "/" << fileNums << " Time taken: " << (time(NULL) - tt1)  << "s ETA: " << float(((t1 - tt1) * (fileNums - fileCurrentNums))) / fileCurrentNums << "s\n";
         //if (fileCurrentNums % 100 == 0) wcout << timeFile  << " " << timeStopWord << " " << timeFeature << " " << timeAdd << "\n";
-        if ((FeatureMapList.find(FolderPath + TxtFile) == FeatureMapList.end()) || (ReadMode == 1))
+        if ((ReadMode == 1) || (FeatureMapList.find(FolderPath + TxtFile) == FeatureMapList.end()))
         {
-            data = fileWstring((FolderPath + TxtFile));
+            //wcout << TxtFile << "\n";
+            //max(1, TxtFile.length() - 8);
+            //wcout << TxtFile.length() - 8 << "\n";
+            if (TxtFile.substr(max(0, long int(TxtFile.length()) - 8)) == L"ndex.txt") { fileNums--; continue; };
 
+            //wcout << "fileWstring\n";
+            //wcout << (FolderPath + TxtFile) << "\n";
+            data = fileWstring((FolderPath + TxtFile));
+            if (data == L"") { wcout << "empty files! skipping\n"; continue;};
             data = StopwordRemove(data);
+            //wcout << "FeatureSelection\n";
             FeatureMap = FeatureSelection(data);
 
-            FeatureMapList[FolderPath + TxtFile] = FeatureMap;
+            //wcout << "FeatureMapList.insert\n";
+            FeatureMap.optimize();
+            *(FeatureMapList[FolderPath + TxtFile]) = FeatureMap;
+
+            //if (ReadMode == 1) *(FeatureMapList[FolderPath + TxtFile]) = FeatureMap; else
+            //FeatureMapList.insert(FolderPath + TxtFile, FeatureMap);
+            FeatureMap.clear();
+            //for (auto i = FeatureMapList.begin(); i != FeatureMapList.end(); i++)
+            //{
+            //    wcout << i->first << "\n";
+            //};
+            //(*FeatureMapList[FolderPath + TxtFile]) = FeatureMap;
+            //wcout << "YOOOOOOO\n\n\n\n";
         }
         else
         {
+            //wcout << "\n FeatureMapList.find != end() \n\n";
         };
     };
+    wcout << "Sorting...\n";
+    FeatureMapList.sort();
     wprintf(L"Đã cập nhật %lld files\n", fileNums);
     wprintf(L"Tổng thời gian: %lld", time(NULL) - tt1);
     return 0;
@@ -303,7 +340,8 @@ int Search ()
     wstring word_2 = L" ";
     wstring word_3 = L" ";
     wstring word_4 = L" ";
-    if (FeatureMapList.empty() == true)
+    //if (FeatureMapList.empty() == true)
+    if (FeatureMapList.top == 0)
     {
         wcout << L"Chưa đọc file!\n";
         return 2;
@@ -320,15 +358,15 @@ int Search ()
         word_3 = L" ";
         word_4 = L" ";
         wistringstream iss(TuKhoa, wistringstream::in);
-        std::map<wstring, int> gay;
+        wtf_map<wstring, int> gay;
 
         while (iss >> word)
         {
-            gay[word]++;
-            if (word_2 != L" ") gay[word_2 + L' ' + word]++;
-            if (word_3 != L" ") gay[word_3 + L' ' + word_2 + L' ' + word]++;
-            if (word_4 != L" ")  gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
-            word_4 = word_3;
+            (*gay[word])++;
+            if (word_2 != L" ") (*gay[word_2 + L' ' + word])++;
+            if (word_3 != L" ") (*gay[word_3 + L' ' + word_2 + L' ' + word])++;
+            //if (word_4 != L" ") (*gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word])++;
+            //word_4 = word_3;
             word_3 = word_2;
             word_2 = word;
         };
@@ -338,17 +376,22 @@ int Search ()
         long* ranking = new long[MaxNumSearch]();
         wstring* best = new wstring[MaxNumSearch];
         best[0] = L"index.txt";
+        //wcout << "Sorting...\n";
+        //FeatureMapList.sort();
+        //wcout << "Sorting done\n";
         for (auto p = FeatureMapList.begin(); p != FeatureMapList.end(); p++)
         {
             a = 0;
             for (auto pp = gay.begin(); pp != gay.end(); pp++)
             {
                 size_t NumSpace = std::count((pp->first).begin(), (pp->first).end(), ' ') + 1;
-                if (p->second.find(pp->first) != p->second.end())
+                if (p->second.quick_find(pp->first) != p->second.end())
                 {
-                    a = a + (p->second[pp->first]) * NumSpace;
+                    a = a + *(p->second[pp->first]) * NumSpace;
+                    //a = a + *((*p).second[(*pp).first]) * NumSpace;
                 };
             };
+            //wcout << a << " Yay\n";
             for (int i = 0; i < MaxNumSearch; i++)
             {
                 if (a > ranking[i])
@@ -360,11 +403,12 @@ int Search ()
                         best[j] = best[j - 1];
                     }
                     ranking[i] = a;
-                    best[i] = p->first;
+                    best[i] = ((*p).first);
                     break;
                 };
             };
         };
+        //wcout << "exited\n";
         if ((best[0].substr(max(1, best[0].length() - 8))) == L"ndex.txt")
         {
             wcout << L"Đã hết tài liệu phù hợp.\n\n";
@@ -389,6 +433,26 @@ int Search ()
     return 0;
 };
 
+int ListAll()
+{
+    wcout << "List ALL\n";
+    for (auto a = FeatureMapList.begin(); a != FeatureMapList.end(); a++)
+    {
+        wcout << a->first << "\n";
+    };
+    FeatureMapList.sort();
+    wcout << "Sorted\n";
+    for (auto a = FeatureMapList.begin(); a != FeatureMapList.end(); a++)
+    {
+        wcout << a->first << "\n";
+        for (auto b = (a->second).begin(); b != (a->second).end(); b++)
+        {
+            wcout << "      " << b->first << "  " << b->second << "\n";
+        };
+    };
+
+    return 0;
+};
 int SetReadMode()
 {
     wprintf(L"____________________________________\n");
@@ -405,7 +469,8 @@ int SetReadMode()
     if (a == 0)
     {
         wprintf(L" Bạn đã chọn [0: Cập nhật các thay đổi]\n");
-    } else wprintf(L" Bạn đã chọn [1: Cập nhật tất cả file]\n");;
+    }
+    else { wprintf(L" Bạn đã chọn [1: Cập nhật tất cả file]\n"); FeatureMapList.clear(); }
     return a;
 };
 
@@ -491,6 +556,9 @@ int main()
             wcout << L"Done.\n";
             break;
         case 6:
+            ListAll(); 
+            break;
+                
             SetMaxNumSearch();
             break;
         case 7:

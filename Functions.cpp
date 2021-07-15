@@ -9,7 +9,7 @@ unsigned long int hashFunction(wchar_t s)
 {
     return unsigned long int(s);
 };
-
+    
 unsigned long int hashFunction(wstring s)
 {
     unsigned long int hash_size = 0;
@@ -293,7 +293,7 @@ unordered_set<std::wstring> stopwords1;
 unordered_set<std::wstring> stopwords2;
 unordered_set<std::wstring> stopwords3;
 unordered_set<wchar_t> IllegalCharSet(NotLegalW, NotLegalW + sizeof(NotLegalW) / sizeof(wchar_t));
-
+unordered_map<wchar_t, wchar_t> rs;
 
 void ReadStopWords(const char filename[])
 {
@@ -321,6 +321,18 @@ void ReadStopWords(const char filename[])
         };
     };
 
+    rs = {
+        {L'Á',L'á'},{L'À',L'à'},{L'Ạ',L'ạ'},{L'Ả',L'ả'},{L'Ã',L'ã'},{L'Â',L'â'},{L'Ấ',L'ấ'},{L'Ầ',L'ầ'},{L'Ẩ',L'ẩ'},{L'Ẫ',L'ẫ'},
+        {L'Ậ',L'ậ'},{L'Ă',L'ă'},{L'Ắ',L'ắ'},{L'Ằ',L'ằ'},{L'Ẳ',L'ẳ'},{L'Ẵ',L'ẵ'},{L'Ặ',L'ặ'},{L'É',L'é'},{L'È',L'è'},{L'Ẻ',L'ẻ'},
+        {L'Ẽ',L'ẽ'},{L'Ẹ',L'ẹ'},{L'Ê',L'ê'},{L'Ế',L'ế'},{L'Ề',L'ề'},{L'Ệ',L'ệ'},{L'Ễ',L'ễ'},{L'Ể',L'ể'},{L'Ú',L'ú'},{L'Ù',L'ù'},
+        {L'Ủ',L'ủ'},{L'Ũ',L'ũ'},{L'Ụ',L'ụ'},{L'Ư',L'ư'},{L'Ứ',L'ứ'},{L'Ừ',L'ừ'},{L'Ự',L'ự'},{L'Ử',L'ử'},{L'Ữ',L'ữ'},{L'Ó',L'ó'},
+        {L'Ò',L'ò'},{L'Ỏ',L'ỏ'},{L'Õ',L'õ'},{L'Ọ',L'ọ'},{L'Ô',L'ô'},{L'Ố',L'ố'},{L'Ồ',L'ồ'},{L'Ổ',L'ổ'},{L'Ỗ',L'ỗ'},{L'Ộ',L'ộ'},
+        {L'Ơ',L'ơ'},{L'Ớ',L'ớ'},{L'Ờ',L'ờ'},{L'Ợ',L'ợ'},{L'Ở',L'ở'},{L'Ỡ',L'ỡ'},{L'Í',L'í'},{L'Ì',L'ì'},{L'Ị',L'ị'},{L'Ỉ',L'ỉ'},
+        {L'Ĩ',L'ĩ'},{L'Đ',L'đ'},{L'Ý',L'ý'},{L'Ỳ',L'ỳ'},{L'Ỷ',L'ỷ'},{L'Ỹ',L'ỹ'},{L'Ỵ',L'ỵ'},{L'Q',L'q'},{L'W',L'w'},{L'E',L'e'},
+        {L'R',L'r'},{L'T',L't'},{L'Y',L'y'},{L'U',L'u'},{L'I',L'i'},{L'O',L'o'},{L'P',L'p'},{L'A',L'a'},{L'S',L's'},{L'D',L'd'},
+        {L'F',L'f'},{L'G',L'g'},{L'H',L'h'},{L'J',L'j'},{L'K',L'k'},{L'L',L'l'},{L'Z',L'z'},{L'X',L'x'},{L'C',L'c'},{L'V',L'v'},
+        {L'B',L'b'},{L'N',L'n'},{L'M',L'm'}
+    };
 
     file.clear();
     file.seekg(0);
@@ -562,19 +574,6 @@ std::wstring readFile(wstring path)
 
 wstring fileWstring(wstring file_name)
 {
-    unordered_map<wchar_t, wchar_t> rs;
-    rs = {
-        {L'Á',L'á'},{L'À',L'à'},{L'Ạ',L'ạ'},{L'Ả',L'ả'},{L'Ã',L'ã'},{L'Â',L'â'},{L'Ấ',L'ấ'},{L'Ầ',L'ầ'},{L'Ẩ',L'ẩ'},{L'Ẫ',L'ẫ'},
-        {L'Ậ',L'ậ'},{L'Ă',L'ă'},{L'Ắ',L'ắ'},{L'Ằ',L'ằ'},{L'Ẳ',L'ẳ'},{L'Ẵ',L'ẵ'},{L'Ặ',L'ặ'},{L'É',L'é'},{L'È',L'è'},{L'Ẻ',L'ẻ'},
-        {L'Ẽ',L'ẽ'},{L'Ẹ',L'ẹ'},{L'Ê',L'ê'},{L'Ế',L'ế'},{L'Ề',L'ề'},{L'Ệ',L'ệ'},{L'Ễ',L'ễ'},{L'Ể',L'ể'},{L'Ú',L'ú'},{L'Ù',L'ù'},
-        {L'Ủ',L'ủ'},{L'Ũ',L'ũ'},{L'Ụ',L'ụ'},{L'Ư',L'ư'},{L'Ứ',L'ứ'},{L'Ừ',L'ừ'},{L'Ự',L'ự'},{L'Ử',L'ử'},{L'Ữ',L'ữ'},{L'Ó',L'ó'},
-        {L'Ò',L'ò'},{L'Ỏ',L'ỏ'},{L'Õ',L'õ'},{L'Ọ',L'ọ'},{L'Ô',L'ô'},{L'Ố',L'ố'},{L'Ồ',L'ồ'},{L'Ổ',L'ổ'},{L'Ỗ',L'ỗ'},{L'Ộ',L'ộ'},
-        {L'Ơ',L'ơ'},{L'Ớ',L'ớ'},{L'Ờ',L'ờ'},{L'Ợ',L'ợ'},{L'Ở',L'ở'},{L'Ỡ',L'ỡ'},{L'Í',L'í'},{L'Ì',L'ì'},{L'Ị',L'ị'},{L'Ỉ',L'ỉ'},
-        {L'Ĩ',L'ĩ'},{L'Đ',L'đ'},{L'Ý',L'ý'},{L'Ỳ',L'ỳ'},{L'Ỷ',L'ỷ'},{L'Ỹ',L'ỹ'},{L'Ỵ',L'ỵ'},{L'Q',L'q'},{L'W',L'w'},{L'E',L'e'},
-        {L'R',L'r'},{L'T',L't'},{L'Y',L'y'},{L'U',L'u'},{L'I',L'i'},{L'O',L'o'},{L'P',L'p'},{L'A',L'a'},{L'S',L's'},{L'D',L'd'},
-        {L'F',L'f'},{L'G',L'g'},{L'H',L'h'},{L'J',L'j'},{L'K',L'k'},{L'L',L'l'},{L'Z',L'z'},{L'X',L'x'},{L'C',L'c'},{L'V',L'v'},
-        {L'B',L'b'},{L'N',L'n'},{L'M',L'm'}
-    };
 
     _setmode(_fileno(stdout), _O_U16TEXT);
     std::locale::global(std::locale("vi_VN.utf8"));
@@ -644,6 +643,7 @@ wstring StopwordRemove(wstring InputString)
 };
 wstring dondep(wstring s)
 {
+    /*
     std::unordered_map<wchar_t, wchar_t> rs;
     rs = {
         {L'Á',L'á'},{L'À',L'à'},{L'Ạ',L'ạ'},{L'Ả',L'ả'},{L'Ã',L'ã'},{L'Â',L'â'},{L'Ấ',L'ấ'},{L'Ầ',L'ầ'},{L'Ẩ',L'ẩ'},{L'Ẫ',L'ẫ'},
@@ -656,7 +656,7 @@ wstring dondep(wstring s)
         {L'R',L'r'},{L'T',L't'},{L'Y',L'y'},{L'U',L'u'},{L'I',L'i'},{L'O',L'o'},{L'P',L'p'},{L'A',L'a'},{L'S',L's'},{L'D',L'd'},
         {L'F',L'f'},{L'G',L'g'},{L'H',L'h'},{L'J',L'j'},{L'K',L'k'},{L'L',L'l'},{L'Z',L'z'},{L'X',L'x'},{L'C',L'c'},{L'V',L'v'},
         {L'B',L'b'},{L'N',L'n'},{L'M',L'm'}
-    };
+    };*/
 
     s = cleanWstring(s);
     wchar_t r;
@@ -664,7 +664,7 @@ wstring dondep(wstring s)
         && (r = rs[c]); }, r);
     return s;
 };
-std::map<wstring, int> FeatureSelection(wstring InputString)
+wtf_map<wstring, int> FeatureSelection(wstring InputString)
 {
     //wcout << "input string: " << InputString << "\n";
     wstring word;
@@ -673,13 +673,17 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
     wstring word_4 = L"";
     wistringstream iss(InputString, wistringstream::in);
     std::map<wstring, int> gay;
-    //std::map<wstring, int> gay2;
+    //wtf_map<wstring, int> gay2;
     int*pairPointer;
     while (iss >> word)
     {
         //if (stopwords.find(word) != stopwords.end()) continue;
+        //(*gay[word])++;
         gay[word]++;
         //std::wcout << "[word]" << word << "Gay [word]: " << gay[word] << "\n";
+        if (word_2 == L"") {
+            word_2 = word; continue;
+        }
         pairPointer = &gay[word_2 + L' ' + word];
         (*pairPointer)++;
         //gay[word_2 + L' ' + word]++;
@@ -689,7 +693,7 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
             (*pairPointer)++;
             if (*pairPointer > 1)
             {
-                gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word]++;
+                (gay[word_4 + L' ' + word_3 + L' ' + word_2 + L' ' + word])++;
             };
         };
         //gay[word_3 + L' ' + word_2 + L' ' + word]++;
@@ -720,7 +724,7 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
     //wcout << count << " YES \n";
     /* //OG, working.
     bool checkBreak = false;
-    for (std::map<wstring, int>::iterator it = gay.begin(); it != gay.end(); ++it) {
+    for (wtf_map<wstring, int>::iterator it = gay.begin(); it != gay.end(); ++it) {
         while (it->second < 3)
         {
             //wcout << "Test " << it->first;
@@ -733,25 +737,33 @@ std::map<wstring, int> FeatureSelection(wstring InputString)
     return gay;
     */
 
-    std::map<wstring, int> gay2;
+    wtf_map<wstring, int> gay2;
     bool checkBreak = false;
-    for (std::map<wstring, int>::iterator it = gay.begin(); it != gay.end(); ++it) {
+    for (auto it = gay.begin(); it != gay.end(); ++it) {
         if (it->second > 2)
         {
             gay2.insert(*it);
         };
-    }
+    };
+
+    /*
+    for (std::pair<wstring, int>* it = gay.begin(); it != gay.end(); ++it) {
+        if (it->second > 2)
+        {
+            gay2.insert(*it);
+        };
+    }*/
     return gay2;
 
 };
-int ReadOneFile(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename)
+int ReadOneFile(wtf_map<wstring, wtf_map<wstring, int>>& FeatureMapList, wstring filename)
 {
     wstring data = fileWstring(filename);
     data = StopwordRemove(data);
-    FeatureMapList[filename] = FeatureSelection(data);
+    (*FeatureMapList[filename]) = FeatureSelection(data);
     return 0;
 };
-int FeatureMapListSave(std::map<wstring, std::map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
+int FeatureMapListSave(wtf_map<wstring, wtf_map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
 {
     _setmode(_fileno(stdout), _O_U16TEXT);
     std::locale::global(std::locale("vi_VN.utf8"));
@@ -765,7 +777,7 @@ int FeatureMapListSave(std::map<wstring, std::map<wstring, int>> &FeatureMapList
     }
     else
     {
-        for (const auto& p : FeatureMapList)
+        for (auto& p : FeatureMapList)
         {
             //std::wcout << p.first << std::endl;
             ofs << p.first<<",0\r\n";
@@ -778,7 +790,7 @@ int FeatureMapListSave(std::map<wstring, std::map<wstring, int>> &FeatureMapList
     };
     return 0;
 };
-int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring filename)
+int FeatureMapListRead(wtf_map<wstring, wtf_map<wstring, int>>& FeatureMapList, wstring filename)
 {
     wstring gay = readFile(filename);
     if (gay.empty()) return 1;
@@ -786,7 +798,7 @@ int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList
     wstring name;
     int temp2;
     wistringstream gayy (gay);
-    std::map<wstring, int > FeatureMap;
+    wtf_map<wstring, int > FeatureMap;
 
     std::getline(gayy, name, L',');
     gayy >> temp2;
@@ -808,7 +820,8 @@ int FeatureMapListRead(std::map<wstring, std::map<wstring, int>>& FeatureMapList
     FeatureMap.clear();
     return 0;
 };
-int Search(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring KeyWord)
+/*
+int Search(wtf_map<wstring, wtf_map<wstring, int>>& FeatureMapList, wstring KeyWord)
 {
     wstring word = L"";
     wstring word_2 = L"";
@@ -819,7 +832,7 @@ int Search(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring Ke
     int max = 0;
     //auto maxIndex;
     wstring maxIndex;
-    for (const auto& p : FeatureMapList)
+    for (auto& p : FeatureMapList)
     {
         count = 0;
         iss.seekg(0);
@@ -846,3 +859,4 @@ int Search(std::map<wstring, std::map<wstring, int>>& FeatureMapList, wstring Ke
     wcout << "ket qua: " << maxIndex << "\n";
     return 0;
 };
+*/
