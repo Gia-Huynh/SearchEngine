@@ -272,6 +272,7 @@ int ReadMetadata ()
 };
 int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, long long fileNums)
 {
+    if (ReadMode == 1) FeatureMapList.clear();
     long long ttt1;
     long long ttt2;
     long long timeFile = 0;
@@ -310,6 +311,7 @@ int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, lon
 
             //wcout << "FeatureMapList.insert\n";
             FeatureMap.optimize();
+            //FeatureMap.sort();
             *(FeatureMapList[FolderPath + TxtFile]) = FeatureMap;
 
             //if (ReadMode == 1) *(FeatureMapList[FolderPath + TxtFile]) = FeatureMap; else
@@ -327,7 +329,6 @@ int ReadAllFile(wifstream& IndexStream, wstring TxtFile, wstring FolderPath, lon
             //wcout << "\n FeatureMapList.find != end() \n\n";
         };
     };
-    wcout << "Sorting...\n";
     FeatureMapList.sort();
     wprintf(L"Đã cập nhật %lld files\n", fileNums);
     wprintf(L"Tổng thời gian: %lld", time(NULL) - tt1);
@@ -470,7 +471,7 @@ int SetReadMode()
     {
         wprintf(L" Bạn đã chọn [0: Cập nhật các thay đổi]\n");
     }
-    else { wprintf(L" Bạn đã chọn [1: Cập nhật tất cả file]\n"); FeatureMapList.clear(); }
+    else { wprintf(L" Bạn đã chọn [1: Cập nhật tất cả file]\n");}
     return a;
 };
 

@@ -141,7 +141,7 @@ public:
                 return &(i->second);
             };
         };
-        wcout << " Ummmmmmm W T F\n";
+        wcout << "operator [] null pointer\n";
         return nullptr;
         //if ((*center).first == gayy) return &((*center).second);
        // return &(begin()->second);
@@ -164,7 +164,7 @@ public:
     };
     void sort()
     {
-        wcout << "void sort() end() - 1\n";
+        //wcout << "void sort() end() - 1\n";
         quicksort(begin(), end()-1, *(begin()));
     };
     std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::pair <T, U>>>> quick_find(T findElement)

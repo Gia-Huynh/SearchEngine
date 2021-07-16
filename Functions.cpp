@@ -526,20 +526,20 @@ std::wstring readFile(wstring path)
         result.clear();
     }
     else {
-        int ch1 = ifs.get();
-        int ch2 = ifs.get();
-        if (ch1 == 0xff && ch2 == 0xfe) {
+        int char1 = ifs.get();
+        int char2 = ifs.get();
+        if (char1 == 0xff && char2 == 0xfe) {
             // UTF-16LE BOM
             encoding = ENCODING_UTF16LE;
         }
-        else if (ch1 == 0xfe && ch2 == 0xff) {
+        else if (char1 == 0xfe && char2 == 0xff) {
             // UTF-16BE BOM
             encoding = ENCODING_UTF16BE;
         }
         else {
-            int ch3 = ifs.get();
-            if (ch1 == 0xef && ch2 == 0xbb && ch3 == 0xbf) {
-                // UTF-8 BOM
+            int char3 = ifs.get();
+            if (char1 == 0xef && char2 == 0xbb && char3 == 0xbf) {
+                //0xef, 0xbb, 0xbf, UTF-8 BOM
                 encoding = ENCODING_UTF8;
             }
             else {
@@ -556,7 +556,7 @@ std::wstring readFile(wstring path)
     else if (encoding == ENCODING_UTF16BE) {
         std::string src = ss.str();
         std::string dst = src;
-        // Using Windows API
+        // Using Windows API: https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/swab?view=msvc-160
         _swab(&src[0u], &dst[0u], src.size() + 1);
         std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> utfconv;
         result = utfconv.to_bytes(std::wstring((wchar_t*)dst.c_str()));
@@ -761,6 +761,7 @@ int ReadOneFile(wtf_map<wstring, wtf_map<wstring, int>>& FeatureMapList, wstring
     wstring data = fileWstring(filename);
     data = StopwordRemove(data);
     (*FeatureMapList[filename]) = FeatureSelection(data);
+    FeatureMapList.sort();
     return 0;
 };
 int FeatureMapListSave(wtf_map<wstring, wtf_map<wstring, int>> &FeatureMapList, wstring filename, int encoding = ENCODING_UTF8)
